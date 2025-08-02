@@ -13,7 +13,7 @@ function HomepageHeader() {
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className={clsx("container", styles.fadeIn)}>
         <img
-          src="/img/enclave_color.svg"
+          src="./img/enclave_color.svg"
           alt="EnclaveRunner Logo"
           className={clsx(
             styles.heroLogo,
