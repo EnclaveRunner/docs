@@ -1,0 +1,28 @@
+# macOS system files
+.DS_Store
+
+# Docusaurus files
+.docusaurus/
+
+# Node.js dependencies
+node_modules/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+
+# Build output
+build/
+
+# Environment variable files
+.env.local
+.env.*.local
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Misc
+*.bak
+*.tmp
