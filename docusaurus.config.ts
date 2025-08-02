@@ -70,6 +70,7 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/EclaveRunner/docs/blob/main",
         },
+        blog: false,
         theme: {
           customCss: "./src/css/custom.css",
         },
