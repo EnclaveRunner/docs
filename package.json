@@ -17,7 +17,8 @@
   "overrides": {
     "@easyops-cn/docusaurus-search-local": {
       "cheerio": "1.0.0"
-    }
+    },
+    "webpack-dev-server": "5.2.1"
   },
   "dependencies": {
     "@docusaurus/core": "3.8.1",
