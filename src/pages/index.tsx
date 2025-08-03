@@ -20,7 +20,7 @@ function HomepageHeader() {
             styles.logoSpin,
             styles.heroImageImpressive
           )}
-          style={{ width: 120, height: 120, marginBottom: 24 }}
+          style={{ width: 190, height: 190, marginBottom: 24 }}
         />
         <Heading as="h1" className={clsx("hero__title", styles.slideDown)}>
           {siteConfig.title}
