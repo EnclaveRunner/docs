@@ -32,29 +32,28 @@ const config: Config = {
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
-  },
 
   themes: [
     // ... Your other themes.
-    // [
-    //   require.resolve("@easyops-cn/docusaurus-search-local"),
-    //   /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-    //   {
-    //     // ... Your options.
-    //     // `hashed` is recommended as long-term-cache of index file is possible.
-    //     hashed: true,
-    //     // For Docs using Chinese, it is recomended to set:
-    //     // language: ["en", "zh"],
-    //     // Customize the keyboard shortcut to focus search bar (default is "mod+k"):
-    //     // searchBarShortcutKeymap: "s", // Use 'S' key
-    //     // searchBarShortcutKeymap: "ctrl+shift+f", // Use Ctrl+Shift+F
-    //     // If you're using `noIndex: true`, set `forceIgnoreNoIndex` to enable local index:
-    //     // forceIgnoreNoIndex: true,
-    //   },
-    // ],
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      {
+        // ... Your options.
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+
+        // For Docs using Chinese, it is recomended to set:
+        // language: ["en", "zh"],
+
+        // Customize the keyboard shortcut to focus search bar (default is "mod+k"):
+        // searchBarShortcutKeymap: "s", // Use 'S' key
+        // searchBarShortcutKeymap: "ctrl+shift+f", // Use Ctrl+Shift+F
+
+        // If you're using `noIndex: true`, set `forceIgnoreNoIndex` to enable local index:
+        // forceIgnoreNoIndex: true,
+      },
+    ],
   ],
 
   presets: [
