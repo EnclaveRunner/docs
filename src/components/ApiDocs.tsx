@@ -118,13 +118,17 @@ const ApiDocs: React.FC = (props: ApiDocsProps) => {
         {swagger.info.license && (
           <span style={{ marginLeft: 16 }}>
             <b>License:</b>{" "}
-            <a
-              href={swagger.info.license.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {swagger.info.license.name}
-            </a>
+            {isSafeUrl(swagger.info.license.url) ? (
+              <a
+                href={swagger.info.license.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {swagger.info.license.name}
+              </a>
+            ) : (
+              <span>{swagger.info.license.name}</span>
+            )}
           </span>
         )}
       </div>
