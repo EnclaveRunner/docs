@@ -106,6 +106,16 @@ const ApiDocs: React.FC = (props: ApiDocsProps) => {
 
   const groups = groupEndpoints(swagger);
 
+  function isSafeUrl(url?: string) {
+    if (!url) return false;
+    try {
+      const parsed = new URL(url, window.location.origin);
+      // Only allow http(s) protocols
+      return parsed.protocol === "http:" || parsed.protocol === "https:";
+    } catch {
+      return false;
+    }
+  }
   return (
     <div
       className="theme-doc-markdown"
