@@ -121,7 +121,6 @@ const ApiDocs: React.FC = (props: ApiDocsProps) => {
       className="theme-doc-markdown"
       style={{ maxWidth: 900, margin: "0 auto", padding: 24 }}
     >
-      <h1>{swagger.info.title}</h1>
       <p>{swagger.info.description}</p>
       <div style={{ marginBottom: 16 }}>
         <b>Version:</b> {swagger.info.version}
