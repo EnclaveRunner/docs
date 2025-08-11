@@ -60,11 +60,19 @@ const ApiDocs: React.FC = (props: ApiDocsProps) => {
   useEffect(() => {
     fetch(props.swaggerURL)
       .then((res) => {
-        if (!res.ok) throw new Error("Failed to fetch API docs");
+        if (!res.ok) {
+          throw new Error(
+            `Failed to fetch API docs from ${props.swaggerURL} (status: ${res.status} ${res.statusText})`
+          );
+        }
         return res.json();
       })
       .then(setSwagger)
-      .catch((e) => setError(e.message))
+      .catch((e) => {
+        setError(
+          `Error fetching API docs from ${props.swaggerURL}: ${e.message}`
+        );
+      })
       .finally(() => setLoading(false));
   }, [props.swaggerURL]);
 
