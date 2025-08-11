@@ -19,7 +19,7 @@ interface SwaggerParameter {
 
 interface SwaggerResponse {
   description: string;
-  schema?: any;
+  schema?: unknown;
 }
 
 interface SwaggerMethod {
