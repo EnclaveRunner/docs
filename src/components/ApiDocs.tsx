@@ -66,7 +66,7 @@ const ApiDocs: React.FC = (props: ApiDocsProps) => {
       .then(setSwagger)
       .catch((e) => setError(e.message))
       .finally(() => setLoading(false));
-  }, []);
+  }, [props.swaggerURL]);
 
   // Group endpoints by tag
   const groupEndpoints = (swagger: SwaggerDoc) => {
