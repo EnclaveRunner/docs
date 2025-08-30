@@ -7,39 +7,33 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "Enclave",
   tagline:
-    "Effortlessly run isolated tasks with precise control over resource access, including network I/O.",
+    "Seamlessly execute isolated tasks and workflows with fine-grained control over resource access and permissions.",
   favicon: "img/enclave_color.svg",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true, // Ensures compatibility with the upcoming Docusaurus v4
   },
 
-  // Set the production url of your site here
+  // Production site URL
   url: "https://EnclaveRunner.github.io",
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  // Base URL for site deployment
   baseUrl: "/docs/",
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: "EnclaveRunner", // Usually your GitHub org/user name.
-  projectName: "docs", // Usually your repo name.
+  // GitHub Pages deployment configuration
+  organizationName: "EnclaveRunner", // GitHub organization or username
+  projectName: "docs", // Repository name
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
-
+  // Internationalization and metadata settings
   themes: [
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
       /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
       {
-        // `hashed` is recommended as long-term-cache of index file is possible.
-        hashed: true,
+        hashed: true, // Enables long-term caching of the search index
       },
     ],
   ],

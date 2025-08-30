@@ -15,12 +15,15 @@ function HomepageHeader() {
         <img
           src="./img/enclave_color.svg"
           alt="EnclaveRunner Logo"
-          className={clsx(
-            styles.heroLogo,
-            styles.logoSpin,
-            styles.heroImageImpressive
-          )}
-          style={{ width: 190, height: 190, marginBottom: 24 }}
+          className={styles.heroLogo}
+          style={{
+            width: "180px",
+            height: "180px",
+            marginBottom: "24px",
+            display: "block",
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
         />
         <Heading as="h1" className={clsx("hero__title", styles.slideDown)}>
           {siteConfig.title}

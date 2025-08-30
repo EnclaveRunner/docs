@@ -45,10 +45,12 @@ interface SwaggerDoc {
 }
 
 interface ApiDocsProps {
-  swaggerURL: string;
+  swaggerURL?: string;
 }
 
-const ApiDocs: React.FC = (props: ApiDocsProps) => {
+const ApiDocs: React.FC<ApiDocsProps> = ({
+  swaggerURL = "https://raw.githubusercontent.com/EnclaveRunner/api-server/main/docs/swagger.json",
+}) => {
   const [swagger, setSwagger] = useState<SwaggerDoc | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -58,23 +60,21 @@ const ApiDocs: React.FC = (props: ApiDocsProps) => {
   }>({});
 
   useEffect(() => {
-    fetch(props.swaggerURL)
+    fetch(swaggerURL)
       .then((res) => {
         if (!res.ok) {
           throw new Error(
-            `Failed to fetch API docs from ${props.swaggerURL} (status: ${res.status} ${res.statusText})`
+            `Failed to fetch API docs from ${swaggerURL} (status: ${res.status} ${res.statusText})`
           );
         }
         return res.json();
       })
       .then(setSwagger)
       .catch((e) => {
-        setError(
-          `Error fetching API docs from ${props.swaggerURL}: ${e.message}`
-        );
+        setError(`Error fetching API docs from ${swaggerURL}: ${e.message}`);
       })
       .finally(() => setLoading(false));
-  }, [props.swaggerURL]);
+  }, [swaggerURL]);
 
   // Group endpoints by tag
   const groupEndpoints = (swagger: SwaggerDoc) => {
@@ -117,145 +117,166 @@ const ApiDocs: React.FC = (props: ApiDocsProps) => {
     }
   }
   return (
-    <div
-      className="theme-doc-markdown"
-      style={{ maxWidth: 900, margin: "0 auto", padding: 24 }}
-    >
-      <p>{swagger.info.description}</p>
-      <div style={{ marginBottom: 16 }}>
-        <b>Version:</b> {swagger.info.version}
-        {swagger.info.license && (
-          <span style={{ marginLeft: 16 }}>
-            <b>License:</b>{" "}
-            {isSafeUrl(swagger.info.license.url) ? (
-              <a
-                href={swagger.info.license.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {swagger.info.license.name}
-              </a>
-            ) : (
-              <span>{swagger.info.license.name}</span>
-            )}
+    <div className="api-docs">
+      {/* Header Section */}
+      <div className="api-header">
+        <p className="api-description">{swagger.info.description}</p>
+        <div className="api-meta">
+          <span className="api-version">
+            <strong>Version:</strong> {swagger.info.version}
           </span>
-        )}
-      </div>
-      <hr />
-      <h2>Endpoints</h2>
-      {Object.entries(groups).map(([tag, endpoints]) => (
-        <div key={tag} style={{ marginBottom: 40 }}>
-          <div
-            style={{
-              fontWeight: 700,
-              fontSize: 20,
-              marginBottom: 8,
-              marginTop: 32,
-            }}
-          >
-            {tag === "_untagged" ? "Other" : tag}
-          </div>
-          <hr style={{ margin: "8px 0 24px 0" }} />
-          {endpoints.map(({ path, method, details }) => {
-            const endpointKey = `${tag}|${path}|${method}`;
-            return (
-              <div
-                key={endpointKey}
-                className="card"
-                style={{ marginBottom: 20 }}
-              >
-                <div
-                  className="card__header"
-                  style={{
-                    cursor: "pointer",
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                  onClick={() =>
-                    setOpenEndpoints((prev) => ({
-                      ...prev,
-                      [endpointKey]: !prev[endpointKey],
-                    }))
-                  }
+          {swagger.info.license && (
+            <span className="api-license">
+              <strong>License:</strong>{" "}
+              {isSafeUrl(swagger.info.license.url) ? (
+                <a
+                  href={swagger.info.license.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="license-link"
                 >
-                  <span
-                    className={`badge badge--${
-                      method === "get" ? "success" : "danger"
-                    }`}
-                    style={{
-                      textTransform: "uppercase",
-                      fontWeight: 700,
-                      marginRight: 12,
-                    }}
-                  >
-                    {method}
-                  </span>
-                  <span style={{ fontWeight: 600 }}>{path}</span>
-                  {details.summary && (
-                    <span style={{ marginLeft: 12 }}>{details.summary}</span>
-                  )}
-                  <span style={{ marginLeft: "auto", fontSize: 18 }}>
-                    {openEndpoints[endpointKey] ? "▼" : "▶"}
-                  </span>
-                </div>
-                {openEndpoints[endpointKey] && (
-                  <div className="card__body">
-                    <div style={{ marginBottom: 8 }}>{details.description}</div>
-                    {details.parameters && details.parameters.length > 0 && (
-                      <div style={{ marginBottom: 8 }}>
-                        <b>Parameters:</b>
-                        <ul style={{ margin: 0, paddingLeft: 20 }}>
-                          {details.parameters.map((param) => (
-                            <li key={param.name}>
-                              <span style={{ fontWeight: 500 }}>
-                                {param.name}
-                              </span>
-                              {param.required && (
-                                <span
-                                  className="badge badge--danger"
-                                  style={{ marginLeft: 4 }}
-                                >
-                                  *
-                                </span>
-                              )}
-                              <span style={{ marginLeft: 8, opacity: 0.7 }}>
-                                ({param.in})
-                              </span>
-                              {param.type && (
-                                <span style={{ marginLeft: 8 }}>
-                                  Type: {param.type}
-                                </span>
-                              )}
-                              {param.description && (
-                                <span style={{ marginLeft: 8 }}>
-                                  {param.description}
-                                </span>
-                              )}
-                            </li>
-                          ))}
-                        </ul>
+                  {swagger.info.license.name}
+                </a>
+              ) : (
+                <span>{swagger.info.license.name}</span>
+              )}
+            </span>
+          )}
+        </div>
+      </div>
+
+      {/* API Endpoints */}
+      <div className="api-content">
+        <h2 className="endpoints-title">API Reference</h2>
+
+        {Object.entries(groups).map(([tag, endpoints]) => (
+          <section key={tag} className="endpoint-group">
+            <h3 className="group-title">
+              {tag === "_untagged"
+                ? "General"
+                : tag.charAt(0).toUpperCase() + tag.slice(1)}
+              <span className="endpoint-count">({endpoints.length})</span>
+            </h3>
+
+            <div className="endpoints-list">
+              {endpoints.map(({ path, method, details }) => {
+                const endpointKey = `${tag}|${path}|${method}`;
+                const isOpen = openEndpoints[endpointKey];
+
+                return (
+                  <div key={endpointKey} className="endpoint-item">
+                    <div
+                      className="endpoint-summary"
+                      onClick={() =>
+                        setOpenEndpoints((prev) => ({
+                          ...prev,
+                          [endpointKey]: !prev[endpointKey],
+                        }))
+                      }
+                    >
+                      <div className="endpoint-method-path">
+                        <span
+                          className={`method-badge method-${method.toLowerCase()}`}
+                        >
+                          {method.toUpperCase()}
+                        </span>
+                        <code className="endpoint-path">{path}</code>
+                      </div>
+
+                      <div className="endpoint-info">
+                        {details.summary && (
+                          <span className="endpoint-summary-text">
+                            {details.summary}
+                          </span>
+                        )}
+                        <button
+                          className="expand-button"
+                          aria-label="Toggle details"
+                        >
+                          {isOpen ? "▼" : "▶"}
+                        </button>
+                      </div>
+                    </div>
+
+                    {isOpen && (
+                      <div className="endpoint-details">
+                        {details.description && (
+                          <div className="endpoint-description">
+                            <p>{details.description}</p>
+                          </div>
+                        )}
+
+                        {details.parameters &&
+                          details.parameters.length > 0 && (
+                            <div className="parameters-section">
+                              <h4 className="section-title">Parameters</h4>
+                              <div className="parameters-table">
+                                {details.parameters.map((param) => (
+                                  <div
+                                    key={param.name}
+                                    className="parameter-row"
+                                  >
+                                    <div className="parameter-name">
+                                      <code>{param.name}</code>
+                                      {param.required && (
+                                        <span className="required-badge">
+                                          required
+                                        </span>
+                                      )}
+                                    </div>
+                                    <div className="parameter-details">
+                                      <div className="parameter-meta">
+                                        <span className="parameter-type">
+                                          {param.type || "string"}
+                                        </span>
+                                        <span className="parameter-location">
+                                          in {param.in}
+                                        </span>
+                                      </div>
+                                      {param.description && (
+                                        <p className="parameter-description">
+                                          {param.description}
+                                        </p>
+                                      )}
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+
+                        <div className="responses-section">
+                          <h4 className="section-title">Responses</h4>
+                          <div className="responses-list">
+                            {Object.entries(details.responses).map(
+                              ([code, resp]) => (
+                                <div key={code} className="response-item">
+                                  <div className="response-code">
+                                    <span
+                                      className={`status-badge status-${code.charAt(
+                                        0
+                                      )}xx`}
+                                    >
+                                      {code}
+                                    </span>
+                                  </div>
+                                  <div className="response-description">
+                                    {resp.description}
+                                  </div>
+                                </div>
+                              )
+                            )}
+                          </div>
+                        </div>
                       </div>
                     )}
-                    <div>
-                      <b>Responses:</b>
-                      <ul style={{ margin: 0, paddingLeft: 20 }}>
-                        {Object.entries(details.responses).map(
-                          ([code, resp]) => (
-                            <li key={code}>
-                              <span style={{ fontWeight: 500 }}>{code}</span>:{" "}
-                              {resp.description}
-                            </li>
-                          )
-                        )}
-                      </ul>
-                    </div>
                   </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      ))}
+                );
+              })}
+            </div>
+          </section>
+        ))}
+      </div>
     </div>
   );
 };
