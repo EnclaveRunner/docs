@@ -34,7 +34,7 @@ function HomepageHeader() {
         <div className={clsx(styles.buttons, styles.fadeInLater)}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/docs/intro"
+            to="/docs/intro"
           >
             Get started with EnclaveRunner
           </Link>

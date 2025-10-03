@@ -16,13 +16,13 @@ const config: Config = {
   },
 
   // Production site URL
-  url: "https://EnclaveRunner.github.io",
+  url: "https://enclave-runner.de",
   // Base URL for site deployment
   baseUrl: "/",
 
   // GitHub Pages deployment configuration
-  organizationName: "EnclaveRunner", // GitHub organization or username
-  projectName: "docs", // Repository name
+  //organizationName: "EnclaveRunner", // GitHub organization or username
+  //projectName: "docs", // Repository name
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
