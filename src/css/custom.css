@@ -348,6 +348,22 @@ body {
     border-color 0.15s ease, transform 0.15s ease;
 }
 
+/* Remove transitions from mobile sidebar items */
+@media (max-width: 996px) {
+  .navbar-sidebar,
+  .navbar-sidebar *,
+  .navbar-sidebar__items,
+  .navbar-sidebar__items *,
+  .navbar-sidebar__item,
+  .navbar-sidebar__item *,
+  .navbar__link,
+  .navbar__link * {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
 :root,
 [data-theme="dark"] {
   color-scheme: light dark;
@@ -383,6 +399,100 @@ body {
     rgba(181, 208, 85, 0.15),
     rgba(152, 176, 74, 0.08)
   );
+}
+
+/* Mobile Navigation Sidebar Fix */
+@media (max-width: 996px) {
+  /* Basic mobile navbar styling */
+  .navbar-sidebar {
+    z-index: 999 !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    background: var(--glass-bg) !important;
+    backdrop-filter: var(--glass-backdrop) !important;
+  }
+  
+  .navbar-sidebar__backdrop {
+    z-index: 998 !important;
+  }
+  
+  /* Simple navbar items styling */
+  .navbar-sidebar__items {
+    display: flex !important;
+    flex-direction: column !important;
+    height: calc(100vh - var(--ifm-navbar-height)) !important;
+    overflow-y: auto !important;
+    padding: 1rem 0 !important;
+  }
+  
+  .navbar-sidebar__item {
+    margin: 0.25rem 0 !important;
+    display: block !important;
+    width: 100% !important;
+  }
+  
+  /* Force navbar links to be visible with content */
+  .navbar-sidebar__item .navbar__link {
+    color: var(--ifm-font-color-base) !important;
+    padding: 0.75rem 1rem !important;
+    display: block !important;
+    border-radius: 4px !important;
+    text-decoration: none !important;
+    background: rgba(125, 143, 63, 0.8) !important;
+    margin: 0.25rem 0.5rem !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    min-height: 50px !important;
+    line-height: 1.5 !important;
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+  
+  .navbar-sidebar__item .navbar__link:hover {
+    background-color: var(--ifm-hover-overlay) !important;
+    transition: none !important;
+  }
+  
+  /* Add content to links if they're empty */
+  .navbar-sidebar__item .navbar__link[href*="docs"]::after {
+    content: "📚 Docs" !important;
+    display: block !important;
+    color: var(--ifm-font-color-base) !important;
+  }
+  
+  .navbar-sidebar__item .navbar__link[href*="github"]::after {
+    content: "🐙 GitHub" !important;
+    display: block !important;
+    color: var(--ifm-font-color-base) !important;
+  }
+  
+  /* Force all content to be visible */
+  .navbar-sidebar__item,
+  .navbar-sidebar__item *,
+  .navbar-sidebar__items,
+  .navbar-sidebar__items * {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  /* Override any hiding */
+  .navbar-sidebar__item[style*="display: none"] {
+    display: block !important;
+  }
+  
+  /* Ensure text is visible */
+  .navbar-sidebar__item .navbar__link,
+  .navbar-sidebar__item .navbar__link * {
+    color: var(--ifm-font-color-base) !important;
+    text-decoration: none !important;
+  }
+  
+  /* Make sure the hamburger menu works */
+  .navbar__toggle {
+    display: block !important;
+  }
 }
 
 .api-docs {
