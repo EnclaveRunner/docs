@@ -18,7 +18,7 @@ const config: Config = {
   // Production site URL
   url: "https://EnclaveRunner.github.io",
   // Base URL for site deployment
-  baseUrl: "/docs/",
+  baseUrl: "/",
 
   // GitHub Pages deployment configuration
   organizationName: "EnclaveRunner", // GitHub organization or username
