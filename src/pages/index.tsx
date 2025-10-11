@@ -7,6 +7,20 @@ import Heading from "@theme/Heading";
 
 import styles from "./index.module.css";
 
+function DevelopmentWarningBanner() {
+  return (
+    <div className={styles.warningBanner}>
+      <span className={styles.warningBadge}>
+        ⚠️ DEVELOPMENT PREVIEW
+      </span>
+      <span className={styles.warningMessage}>
+        This project is under heavy development and subject to breaking changes.
+        <strong> Not recommended for production use yet.</strong>
+      </span>
+    </div>
+  );
+}
+
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -128,8 +142,9 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`Welcome to ${siteConfig.title}`}
-      description="Secure, high-performance application deployment with hardware-level protection"
+      description="Secure, high-performance job deployment platform with security at it's core"
     >
+      <DevelopmentWarningBanner />
       <HomepageHeader />
       <main>
         <FeatureSection />

@@ -87,6 +87,31 @@
   opacity: 1; /* Ensure visibility */
 }
 
+/* Development Warning Banner */
+.warningBanner {
+  background: rgba(251, 191, 36, 0.1);
+  border-bottom: 1px solid rgba(217, 119, 6, 0.3);
+  text-align: center;
+  padding: 0.75rem 1rem;
+}
+
+.warningBadge {
+  display: inline;
+  background: rgba(217, 119, 6, 0.2);
+  color: #92400e;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+}
+
+.warningMessage {
+  display: inline;
+  color: #a16207;
+  font-size: 0.9rem;
+}
+
 .heroImageImpressive {
   opacity: 0;
   transform: scale(0.8);
@@ -415,6 +440,20 @@
 }
 
 /* Dark Mode Adjustments */
+[data-theme="dark"] .warningBanner {
+  background: rgba(217, 119, 6, 0.15);
+  border-bottom-color: rgba(146, 64, 14, 0.3);
+}
+
+[data-theme="dark"] .warningBadge {
+  background: rgba(217, 119, 6, 0.25);
+  color: #d97706;
+}
+
+[data-theme="dark"] .warningMessage {
+  color: #ca8a04;
+}
+
 [data-theme="dark"] .features {
   background: linear-gradient(
     135deg,
@@ -451,41 +490,46 @@
 
 /* Responsive Design */
 @media screen and (max-width: 996px) {
-  .features {
-    padding: 2rem 0;
-  }
-
-  .feature {
-    margin-bottom: 2rem;
-  }
-
-  .featureIcon {
-    font-size: 3rem;
-  }
-
-  .statNumber {
-    font-size: 2.5rem;
-  }
-
-  .getStarted {
-    padding: 2rem 0;
-  }
-
-  .getStarted h2 {
-    font-size: 2rem;
-  }
-
-  .quickStartLinks {
-    text-align: center;
-  }
-
-  .quickStartLinks .button {
-    margin: 0.5rem;
+  .warningBadge {
     display: block;
-    width: 100%;
+    margin-bottom: 0.25rem;
   }
+}
 
-  .codeExample {
-    margin-top: 2rem;
-  }
+.features {
+  padding: 2rem 0;
+}
+
+.feature {
+  margin-bottom: 2rem;
+}
+
+.featureIcon {
+  font-size: 3rem;
+}
+
+.statNumber {
+  font-size: 2.5rem;
+}
+
+.getStarted {
+  padding: 2rem 0;
+}
+
+.getStarted h2 {
+  font-size: 2rem;
+}
+
+.quickStartLinks {
+  text-align: center;
+}
+
+.quickStartLinks .button {
+  margin: 0.5rem;
+  display: block;
+  width: 100%;
+}
+
+.codeExample {
+  margin-top: 2rem;
 }
