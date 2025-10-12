@@ -147,8 +147,6 @@ const ApiDocs: React.FC<ApiDocsProps> = ({
 
       {/* API Endpoints */}
       <div className="api-content">
-        <h2 className="endpoints-title">API Reference</h2>
-
         {Object.entries(groups).map(([tag, endpoints]) => (
           <section key={tag} className="endpoint-group">
             <h3 className="group-title">
