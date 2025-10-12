@@ -5,4 +5,24 @@ title: API-Server
 
 import ApiDocs from "../../src/components/ApiDocs";
 
+## Shared Endpoints
+
+<ApiDocs swaggerURL="https://raw.githubusercontent.com/EnclaveRunner/shareddeps/main/docs/swagger.json" />
+
+## API-Server Endpoints
+
 <ApiDocs swaggerURL="https://raw.githubusercontent.com/EnclaveRunner/api-server/main/docs/swagger.json" />
+
+## Configuration
+
+The API-Server can be configured via a config file (YAML, JSON or TOML) located
+at `/etc/enclave/config.yaml`, `$HOME/.enclave` or `./`.
+
+The configuration file supports the following options:
+
+| Option                   | Allowed Values                     | Description                                                        |
+| ------------------------ | ---------------------------------- | ------------------------------------------------------------------ |
+| `human_readable_output`  | `true` / `false`                   | Enable Human-reable output (= to stdout and in color) for the logs |
+| `log_level`              | `debug`, `info`, `warn` or `error` | Set the log-level                                                  |
+| `production_environment` | `true` / `false`                   | Operate (gin) server in production mode                            |
+| `port`                   | `<port>`                           | Port to run the API-Server on                                      |
