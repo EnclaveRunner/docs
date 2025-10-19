@@ -1,6 +1,7 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -20,15 +21,31 @@ const config: Config = {
   // Base URL for site deployment
   baseUrl: "/",
 
-  // GitHub Pages deployment configuration
-  //organizationName: "EnclaveRunner", // GitHub organization or username
-  //projectName: "docs", // Repository name
-
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
+  plugins: [
+    [
+      "docusaurus-plugin-openapi-docs",
+      {
+        id: "api", // plugin id
+        docsPluginId: "classic", // configured for preset-classic
+        config: {
+          petstore: {
+            specPath: "openAPI",
+            outputDir: "docs/API",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+            },
+          } satisfies OpenApiPlugin.Options,
+        },
+      },
+    ],
+  ],
+
   // Internationalization and metadata settings
   themes: [
+    "docusaurus-theme-openapi-docs",
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
       /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
@@ -45,6 +62,7 @@ const config: Config = {
         docs: {
           sidebarPath: "./sidebars.ts",
           editUrl: "https://github.com/EclaveRunner/docs/blob/main",
+          docItemComponent: "@theme/ApiItem",
         },
         blog: false,
         theme: {

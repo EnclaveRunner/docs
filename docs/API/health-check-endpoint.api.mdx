@@ -1,0 +1,63 @@
+---
+id: health-check-endpoint
+title: "Health-Check Endpoint"
+description: "Health-Check to see if the Api-Server is reachable / ready"
+sidebar_label: "Health-Check Endpoint"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VMFu2zAM/RVB5yQ2tg4ociuKIC0wDAG2noodGJmx1cqSJtHODCP/PjJOtwbpbUBysUyTfO+RTxl1hdkkG8kGr5f6AcFRM79v0LwqCiojKrtT1KC6i3b+HVOPSdmsEoJpYOtQFXKuBj3TBHXWy2edh0zY6p8znTDH4DNyeNSfylIe54BjJqAuL6cmB+5igif0JKkQo7MGJLV4yZI/6mwabEFONETkDmH7goa4EKrKSiq4TQoRE9kJ95SXKVlf64P8ZvrmIzJbqJjHrw4zXZHIzSURH0jtQuerq9H48tE8LCMnrmcbHPeOKYV0JUrMqUVqQsXxGqU4AjX8UrzZbSIljht1l5x8Klww4JqQaXlb3pb6wB60fhcupd1tHtU9a0isbsWPIQZWy0NPR7OvvHHQo9o4II614m5LTki+fZIO0304TQSMTIR580CQTS+gHlqpWX97Umv0KGibbssJ6uuUpPrPi5IbTAIaopiXRbHf7xe17xYh1cWpWy7q6OacvGiodZphRPwkpi85XEossvQW/Dvosxu98tVRJwOejWP8t9L//AuYFkn4m4rowHohddQ2nvb3rKdc3ozsSQLjuIWMT8kdDhLm+5cGjvOxh2QFQd64UcOVPG5Z+CsOskVjMIqaHlwnwBd2FAf89dF69YPN9QdvVLUu
+sidebar_class_name: "get api-method"
+info_path: docs/API/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Health-Check Endpoint"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/ready"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Health-Check to see if the Api-Server is reachable / ready
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"{status: ready}","content":{"application/json":{"schema":{"type":"object","additionalProperties":{"type":"string"}}}}},"400":{"description":"bad request","content":{"application/json":{"schema":{"type":"object","additionalProperties":{"type":"string"}}}}},"404":{"description":"not found","content":{"application/json":{"schema":{"type":"object","additionalProperties":{"type":"string"}}}}},"500":{"description":"internal server error","content":{"application/json":{"schema":{"type":"object","additionalProperties":{"type":"string"}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      
