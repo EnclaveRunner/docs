@@ -29,11 +29,13 @@ const config: Config = {
         id: "api", // plugin id
         docsPluginId: "classic", // configured for preset-classic
         config: {
-          petstore: {
+          enclave: {
             specPath: "openAPI",
             outputDir: "docs/API",
             sidebarOptions: {
               groupPathsBy: "tag",
+              categoryLinkSource: "tag",
+              sidebarCollapsible: true,
             },
           } satisfies OpenApiPlugin.Options,
         },
