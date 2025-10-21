@@ -10,9 +10,7 @@ import styles from "./index.module.css";
 function DevelopmentWarningBanner() {
   return (
     <div className={styles.warningBanner}>
-      <span className={styles.warningBadge}>
-        ⚠️ DEVELOPMENT PREVIEW
-      </span>
+      <span className={styles.warningBadge}>⚠️ DEVELOPMENT PREVIEW</span>
       <span className={styles.warningMessage}>
         This project is under heavy development and subject to breaking changes.
         <strong> Not recommended for production use yet.</strong>
@@ -117,7 +115,7 @@ function GetStartedSection() {
               </Link>
               <Link
                 className="button button--secondary button--lg"
-                to="/docs/components/first-steps"
+                to="/docs/first-steps"
               >
                 🚀 First Steps
               </Link>
