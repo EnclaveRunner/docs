@@ -22,7 +22,7 @@ jobs:
         run: npm ci
 
       - name: Update API docs
-        run: npm run openapi
+        run: npm run openAPI
 
       - name: Build project
         run: npm run build
