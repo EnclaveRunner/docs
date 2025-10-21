@@ -61,7 +61,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
-          editUrl: "https://github.com/EclaveRunner/docs/blob/main",
+          editUrl: "https://github.com/EnclaveRunner/docs/blob/main",
           docItemComponent: "@theme/ApiItem",
         },
         blog: false,
