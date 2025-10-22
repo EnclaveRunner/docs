@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "openAPI": "rm -rf ./docs/API && npm run docusaurus gen-api-docs all",
+    "openAPI": "rm -rf ./docs/api && npm run docusaurus gen-api-docs all",
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",

@@ -31,7 +31,7 @@ const config: Config = {
         config: {
           enclave: {
             specPath: "openAPI",
-            outputDir: "docs/API",
+            outputDir: "docs/api",
             sidebarOptions: {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",
