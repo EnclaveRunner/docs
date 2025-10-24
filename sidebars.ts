@@ -23,6 +23,7 @@ const sidebars: SidebarsConfig = {
       items: apiSidebar,
     },
     "Wiki",
+    "Architecture",
   ],
   // But you can create a sidebar manually
   /*
