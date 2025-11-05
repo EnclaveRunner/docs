@@ -533,3 +533,106 @@
 .codeExample {
   margin-top: 2rem;
 }
+
+/* CLI Download Tabs */
+.cliDownload {
+  margin-top: 1rem;
+}
+
+.tabsContainer {
+  display: flex;
+  border-bottom: 2px solid var(--ifm-color-emphasis-200);
+  margin-bottom: 1rem;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-600);
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.tab:hover {
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-800);
+}
+
+.tabActive {
+  color: var(--ifm-font-color-secondary) !important;
+  border-bottom-color: var(--ifm-color-primary);
+}
+
+.tabIcon {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .tab:hover {
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-100);
+}
+
+[data-theme="dark"] .tabActive {
+  background: rgba(181, 208, 85, 0.1);
+}
+
+/* Code container with copy button */
+.codeContainer {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.copyButton {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: var(--ifm-color-emphasis-200);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+}
+
+.copyButton:hover {
+  background: var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-emphasis-800);
+  transform: scale(1.05);
+}
+
+.copyButtonSuccess {
+  background: var(--ifm-color-success) !important;
+  color: white !important;
+  border-color: var(--ifm-color-success) !important;
+}
+
+/* Dark theme copy button adjustments */
+[data-theme="dark"] .copyButton {
+  background: var(--ifm-color-emphasis-300);
+  border-color: var(--ifm-color-emphasis-400);
+  color: var(--ifm-color-emphasis-100);
+}
+
+[data-theme="dark"] .copyButton:hover {
+  background: var(--ifm-color-emphasis-400);
+  color: var(--ifm-color-emphasis-0);
+}
