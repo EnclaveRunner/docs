@@ -1,9 +1,11 @@
 import type { ReactNode } from "react";
+import { useState, useEffect } from "react";
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
+import { FaApple, FaLinux, FaCopy, FaCheck } from "react-icons/fa";
 
 import styles from "./index.module.css";
 
@@ -95,6 +97,106 @@ function FeatureSection() {
   );
 }
 
+function CliDownloadTabs() {
+  // Function to detect the user's operating system
+  const detectOS = (): "macos" | "linux" => {
+    if (typeof window === "undefined") {
+      // Server-side rendering fallback
+      return "linux";
+    }
+
+    const userAgent = window.navigator.userAgent.toLowerCase();
+    const platform = window.navigator.platform?.toLowerCase() || "";
+
+    // Check for macOS/iOS
+    if (
+      userAgent.includes("mac") ||
+      platform.includes("mac") ||
+      userAgent.includes("iphone") ||
+      userAgent.includes("ipad")
+    ) {
+      return "macos";
+    }
+
+    // Default to Linux for everything else (Linux, Windows users can still switch)
+    return "linux";
+  };
+
+  const [activeTab, setActiveTab] = useState<"macos" | "linux">("linux");
+  const [copied, setCopied] = useState(false);
+
+  // Set the correct tab based on detected OS when component mounts
+  useEffect(() => {
+    setActiveTab(detectOS());
+  }, []);
+
+  const commands = {
+    macos: `INSTALL_DIR="/usr/local/bin" sh <(curl -L https://raw.githubusercontent.com/EnclaveRunner/cli/main/install.sh)`,
+    linux: `INSTALL_DIR="~/.local/bin" sh <(curl -L https://raw.githubusercontent.com/EnclaveRunner/cli/main/install.sh)`,
+  };
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(commands[activeTab]);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
+    } catch (err) {
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = commands[activeTab];
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
+
+  return (
+    <div className={styles.cliDownload}>
+      <div className={styles.tabsContainer}>
+        <button
+          className={clsx(
+            styles.tab,
+            activeTab === "macos" && styles.tabActive
+          )}
+          onClick={() => setActiveTab("macos")}
+        >
+          <span className={styles.tabIcon}>
+            <FaApple />
+          </span>
+          macOS
+        </button>
+        <button
+          className={clsx(
+            styles.tab,
+            activeTab === "linux" && styles.tabActive
+          )}
+          onClick={() => setActiveTab("linux")}
+        >
+          <span className={styles.tabIcon}>
+            <FaLinux />
+          </span>
+          Linux
+        </button>
+      </div>
+      <div className={styles.codeContainer}>
+        <pre className={styles.codeBlock}>
+          <code>{commands[activeTab]}</code>
+        </pre>
+        <button
+          className={clsx(styles.copyButton, copied && styles.copyButtonSuccess)}
+          onClick={handleCopy}
+          title={copied ? "Copied!" : "Copy to clipboard"}
+        >
+          {copied ? <FaCheck /> : <FaCopy />}
+        </button>
+      </div>
+    </div>
+  );
+}
+
 function GetStartedSection() {
   return (
     <section className={styles.getStarted}>
@@ -103,8 +205,10 @@ function GetStartedSection() {
           <div className="col col--6">
             <h2>Quick Start</h2>
             <p>
-              Get up and running with EnclaveRunner in minutes using docker
-              compose or deploy it to your Kubernetes cluster (planned).
+              You already have a running instance of EnclaveRunner and want to
+              get started? Get the encl CLI to deploy your first isolated job in
+              minutes! If you haven't set up an EnclaveRunner instance yet,
+              check out the First Steps section.
             </p>
             <div className={styles.quickStartLinks}>
               <Link
@@ -123,10 +227,8 @@ function GetStartedSection() {
           </div>
           <div className="col col--6">
             <div className={styles.codeExample}>
-              <h3>Example Usage</h3>
-              <pre className={styles.codeBlock}>
-                <code>{`<coming soon>`}</code>
-              </pre>
+              <h3>Download and install the encl CLI</h3>
+              <CliDownloadTabs />
             </div>
           </div>
         </div>
