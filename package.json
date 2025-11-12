@@ -6,7 +6,7 @@
     "docusaurus": "docusaurus",
     "openAPI": "rm -rf ./docs/api && npm run docusaurus gen-api-docs all",
     "start": "docusaurus start",
-    "build": "docusaurus build",
+    "build": "docusaurus build && cp ./google5239173c14d537e9.html ./build/",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
