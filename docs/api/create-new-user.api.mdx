@@ -1,0 +1,71 @@
+---
+id: create-new-user
+title: "Create New User"
+description: "Create a new user."
+sidebar_label: "Create New User"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVsFu2zgQ/RVizlonaXcPq1taFMUCi27QJCfDh7E4ttlSpDpD2REM/ftiKMWWYacbLHLoxbLI4ePMe29I7cGSVOya5GKAEj4yYSKDJtDOtEI8gwISrgXKOTwKscCiAKYfLUn6EG0H5T6/OiYLZeKWCqhiSBSSTmHTeFehol99E91iD1JtqEb9l7qGoIS4/EZVgmICNIeANUEBDYrsIlsowDppPHZfdGJRQMOxIU6ORKFy+BFSEruw1kUn5T1syGikiSuTNpQrNCmaKpc9g36y4avAnqPNKnJGPPLWn2b8KrhxwZDjBci+gOSSp4NSKgn0vU4wSRODDHS8u77Rx+kOGjyWao20VUUiq9b7TkV+E9Gc6jQq91O53Cv5bVtnp2JlWv+/1m+gyinaRBBl9+uowSjJ79fX5yoo4thAZodiavSryDVZE9m4sEXv7JsJQsyRz+kfhs+Kn5bzifkzBWJXHYq5YKncAxy3zpI12KYNhTRmqk6z+opezI6YjsVltPeX0SYgZIcGtZHEhJjMBrdkGuLaiegOKRrMLs6SjKSSNUwSW65o3OnPF1oBPRPaztCTkyS/JOc3L7D0bKAGOx/RGicmxWg88pp+xUL+uNQJt8G4kIgDeiPEW2KTsU2sqpaZ7Mz8HeN3gynrO4b4uJZ8NtaRyVhK6LwMrShUtexSB+V8Dx9QXHXbpg2U80W/KKCmtIkWSmiipHy16Bxcqcck/8IR4l4ZGuqdAB1q3qTUaHSOghKWGpNzUIq/Hu/HT09YN56OV9TxoDneNJPDZ3o2HZgtwIVVzNs/Exwqr81we/eXuc+8XDy5KCTumuhCyoyh92a6cnSRGAzWVLGu2zA6RT20JZYBans9ez+7ybdjlFRjmJQzfjF8oZ15lPM09kcrvvBxMRCa6CldNR5d0G1a9rp0UGgOWSEo8lP9uFEByzns90sUemTf9zr8oyVW7RcFbJEdLpWq+aIvYENoibMtvlOnqQxJ/fagu2u4bzWLs17pi+cVt1VFTfpp7NRjd//cP0ABy/ETqY5W1zDutMdwByVAATGTlE2Wx/bgMaxbXGvsgKmWwlPvDV4rxqfWNE5g6Cb5ZXIG46owKlffQzGW045DucL/Wn83OnWy/mDeftH3/b8S3Y/v
+sidebar_class_name: "post api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create New User"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/users/user"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new user.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["name","password","displayName"],"properties":{"name":{"type":"string","description":"The name of the user to create."},"password":{"type":"string","description":"The password for the new user."},"displayName":{"type":"string","description":"The display name for the new user."}},"title":"CreateUser"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":"User created successfully.","content":{"application/json":{"schema":{"type":"object","required":["id","name","displayName"],"properties":{"id":{"type":"string","description":"The uuid of the user."},"name":{"type":"string","description":"The name of the user."},"displayName":{"type":"string","description":"The display name of the user."}},"title":"UserResponse"}}}},"400":{"description":"The request was malformed or invalid.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"401":{"description":"The provided authentication credentials were invalid."},"403":{"description":"The authenticated user does not have permission to access the requested resource."},"409":{"description":"User already exists.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"An internal server error occurred. Look at the server logs for more details."}}}
+>
+  
+</StatusCodes>
+
+
+      

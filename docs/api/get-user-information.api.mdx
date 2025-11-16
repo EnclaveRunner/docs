@@ -1,0 +1,71 @@
+---
+id: get-user-information
+title: "Get User Information"
+description: "Retrieve information about a specific user. Either the user ID or name must be provided."
+sidebar_label: "Get User Information"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVk1vGzkM/SuEzgMn2XYvvqVoEARYLIqmORk+yBLtUauRpiTHqWHMfy+omcST2EmzQBfoZQR98JF8jxJnbzyyo9BKyMnMzWcUCrhFCGmdqbG6DHaVOwEL3KIL6+CgY6QZXAWpkUBqLAtw8xEyQbINQtOxwAqhpbwNHv3MVEbshs18Ye4Yic2yMq0l26DobL7YGzU0c6NQN95UJmg83zuknakM4fcuEHozX9vIWBl2NTbWzPdGdq3asVBIG9NXzzL6ouF1wUNeH0KVDDRmOjN99ei8DL/VdaHjZddLxec2J0ZWxL/Oz3V4inPbOYfM6y7Cw2G4D1IPgBOllGaXk2ASRbFtG4MrO2dfWaH2x8Hn1Vd08iTPhQkqwEiGD9xGu/tXZ6oa5RZJwhBv8Mc8vEUBZX0k/S3mz1ks5tPA3oQyGpxC6ysjQaICaH1+Hmk2fa9b70+poojKGbLAvWVobFQh0OstCGlrY/C/TRAkynRM/7B8XImTdK6IrjEhBfeYzMXpZB4uK9hOakwyRgqO0OvURoZ7JDwkV9DenUabgKAfKtVnZEhZoLZbhBapCczqQTLYUuJFkpFU9FrtuSOHo6f3r4owOV/0UEfr3KU/U4SLF2h7qKjW7mK2HgKD5AzR0gb/xET+PnU1LhOEJEjJRmCkLRIUbMjOdUToZ/BPzt/AShF8PBLzhmGdCZpMCB7FhsjD3WR0HQXZlUbxwXJwl53UZr5Y6gvaoNTZm7nZoGbaWt0yZ1pzXL7mgHCrBA3pTnAeU65FWjM+8Tpf6ZkSgj6z5eADE8lFLePLTzdwWxI4+eZgEtq1OSQpqdkYYWo5ys1gkweXm6ZLo6Qq9haJB6jt+ezd7EKvQZtZGlvEHpvWNQrclQZ86ATPY9kfCud/7fEDi4I/5KyNNiSNuKOoAQyyLEqDZ1OVUWuwziy6vt+vLOMdxb7X5aH9qt4+sF3FSQN+MbNf9/oXQvyGu+mvx9bGTg+VX4P/5v71fv+q+7HfHpwvdUJBvZdSr0yN1iMVVgabS+ewlYnV0aPw5IJcX30xlbFPa36o8WocFXvcsGk3QS76DBdGq02j7Xsz5a4koJT9yv6TZb7P5Cf27bhk+mXf9z8Bj1Cr2g==
+sidebar_class_name: "get api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get User Information"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/users/user"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieve information about a specific user. Either the user ID or name must be provided.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"userId","in":"query","required":false,"schema":{"type":"string"},"description":"The uuid of the user to retrieve."},{"name":"name","in":"query","required":false,"schema":{"type":"string"},"description":"The name of the user to retrieve."}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response with user information.","content":{"application/json":{"schema":{"type":"object","required":["id","name","displayName"],"properties":{"id":{"type":"string","description":"The uuid of the user."},"name":{"type":"string","description":"The name of the user."},"displayName":{"type":"string","description":"The display name of the user."}},"title":"UserResponse"}}}},"400":{"description":"The request was malformed or invalid.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"401":{"description":"The provided authentication credentials were invalid."},"403":{"description":"The authenticated user does not have permission to access the requested resource."},"404":{"description":"The requested resource was not found.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"An internal server error occurred. Look at the server logs for more details."}}}
+>
+  
+</StatusCodes>
+
+
+      

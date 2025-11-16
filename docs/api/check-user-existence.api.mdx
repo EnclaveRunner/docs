@@ -1,0 +1,71 @@
+---
+id: check-user-existence
+title: "Check User Existence"
+description: "Check if a specific user exists."
+sidebar_label: "Check User Existence"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMtSGzEQ/BXVnBUDgVz2BomTcKN4nFw+yNLYK1hLYqQ1OC79e2qkDSzYeRxysdajnkdP9+4ODEZNNiTrHTTwuUX9IOxSKBEDaru0WvQRSeCzjSlOQEJSqwjNDO4iUoS5BMLHHmO68GYLza78tYQGmkQ9StDeJXSJr1QIndWKex3dR264g6hbXCt+StuA0IBf3KNOIEeFZmANdwrkA1KyGBlvzSgrJrJuBfIdn9sWRd9bI/xSJH5mLskLwkQWNziBnCUkmzouwpSuKxvImW8IY/Au1oYfj4/5eNvhbrydLOHsEOhCGTGsaQCdHKjkVJ9aT/YHmgF1uo/66mlhjUE3QM5+M5LxGIXzqc5WwScH6vGGhtFEUNvOKyNsFMl70SlaIUv+XyREIk/7KtbwnpBjWaZE39AhWT2o8unQji9dQnKqExFpw5pw4apvRN2TTVtoZju4UNHq8z610MzmeS5hjan1BhpoURmQEBTfwRF7JZZfeC1xw1zr5KNCL9O3KQVGFxQ0sGBMmYGXdf36pkyf1Towu+rjF9oSrFv6UvEXe6c7tUFxfnUpbgq1gy5Hl2gbvHVJLD0J1XVinDlIHIVyRmi/XvdukJEF3iDFWmpzPDmdnPAcwce0VkVgpwqZ+nEo7pqyqdBpfD/L7tUs//QxqWtL+JyOQqes4849dVyo6jCDogPIcrJ/Wh8Tx3e7hYp4R13OHH7skVjhuYSNIqsWvL3ZPMuiK1IR/wG3PFgd8cMtd2d41/MUe97O8lfGudYY0h+xYyd9n55/AQmL4ZO49oZzSD3xO6GeoAGQ4MvKipVKbAedcqterRhba7Jx1FuHVUfJ4WROw4Vy29F8ZTnVniwYK5gzyIFOP4QKw7/lX6kYnzyZUX4YQpDnOeefYJclyw==
+sidebar_class_name: "head api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check User Existence"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"head"}
+  path={"/users/user"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Check if a specific user exists.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["id"],"properties":{"id":{"type":"string","description":"The uuid of the user to retrieve."}},"title":"UserRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"User exists."},"400":{"description":"Bad request."},"401":{"description":"Unauthorized."},"403":{"description":"Forbidden."},"404":{"description":"User does not exist."},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"Internal server error."}}}
+>
+  
+</StatusCodes>
+
+
+      

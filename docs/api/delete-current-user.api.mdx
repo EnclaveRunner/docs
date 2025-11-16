@@ -1,0 +1,63 @@
+---
+id: delete-current-user
+title: "Delete Current User"
+description: "Delete the currently authenticated user."
+sidebar_label: "Delete Current User"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1vFDEM/SuRz6Ptlo/L3gqtEBJCiMJptYc0cTuBbBJsZ8toNf8dOTMLW7aIInGamYz9/Oz3nD14ZEehSMgJVnCJEQWN9GhcJcIkcTC2So9JgrOC3lRGWkAHYu8YVmv4zEgMmw4IueTEyLDaw7PlUh8P0V9PkA3C+FbKG67OIfNtjXFYmI8olRI3BoeIQ0WXk2ASxbWlROUTcjr7wgq+B3Y9bq2+yVAQVpBvvqATUGbfaiD0Sjd46CDZLUIHPnCJdnivX5sOCuWCJGHqIPgjKBYK6U5THjT0qUdTa/Am3zbGE9NxLvCkdI08ST8m9iSUOeExtLEDCRIVQKX6OKsE46i/XizPT3VSxEJ5Fzz6Y/VDTsYRev20kc09EpqQdjYG33i/WD5/HO3UQsZnZJOymN7u0BSkbWDWCpKNbZZoXah2yJpFyLmSw6nS+R8qzfGm2CFm601gIzmbaOkO/5uJkCjTqWWm4xPBjiW4InqDCSm4WYCXjy3KRTIhCVKy0TDSDsk0bJNdW0u/MO9y/mqstBnNITHfsbnNZLaZdHvEhsiTAxhdpSADrNZ7eGU5uIsqPazWm3HTwRalzx5WMG0cdFCs/oUzVYrP2rIcIK51QlO/R0A/e+5Fika3KFjBjcY0DiHd5hZ4GEVyUaW/+PDWXLcOHrU2JqGh5JCk9WZjNMeZs95sbPLG5e22pllTVXuHxBPUbrl4vjhX65TMsrVN7WlND7fe4XrSNfmdyv6Xcf7pkpyGIvhdzkq0ISmBSlEBpxmvoc0YVAV1VJ9Z9HS/v7GMnymOox5/q0iq3qaDnaVgb3SE683YQY/WIzVhv+Kg5nEOizp2Z2PV6ic+f6D55dW7q09X0IF9KOQkXDc/FX7+YdNwBN54Ti7QuelExxG6mUudj2Ds/p7/wTLfZ/JH+WU+gnEzjuMPw6hSBA==
+sidebar_class_name: "delete api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Current User"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/users/me"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete the currently authenticated user.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Current user deleted successfully. Returns the deleted user.","content":{"application/json":{"schema":{"type":"object","required":["id","name","displayName"],"properties":{"id":{"type":"string","description":"The uuid of the user."},"name":{"type":"string","description":"The name of the user."},"displayName":{"type":"string","description":"The display name of the user."}},"title":"UserResponse"}}}},"401":{"description":"The provided authentication credentials were invalid."},"403":{"description":"The authenticated user does not have permission to access the requested resource."},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"An internal server error occurred. Look at the server logs for more details."}}}
+>
+  
+</StatusCodes>
+
+
+      

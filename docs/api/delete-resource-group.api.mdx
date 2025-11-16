@@ -1,0 +1,71 @@
+---
+id: delete-resource-group
+title: "Delete Resource Group"
+description: "Delete an existing resource group."
+sidebar_label: "Delete Resource Group"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVUFv2zoM/isEz17abn0X39ItKAbsMHTdKciBsZhYmyx5lJw0CPzfHyg7TbJk2zu8w3yxTZEfyY+fpD0ajpXYNtngscQP7DgxkAd+sTFZvwbhGDqpGNYSunaCBSZaRyzn+PQwfY+LAoV/dBzTQzA7LPf51wobLJN0XGAVfGKfdIna1tmKNNnNt6gZ9xirmhvSr7RrGUsMy29cJSxOgOZ4qOJRi9CkrYSWJVmOQ87T5SNWTGL9Gouf2nyuGTw1DGEFqeaLHvv8aAWxDT4OOd7e3urrHOnpLBJM5s9A7KqKY1x1zu0m2Bd4fy34OafO5MGWIjTkVkEaNhAErN+Qs0YJ/18YZJEgl8wN5gvGtPtkk1PTTOSRPYutcKDl/vbuejOthI01bIC6VLNPY6VQCRv9JRdhy8LH5jLau+toJyBsoIssYAJH8CFBTRuGlqWxMWqGFIAy5eM8M6lsXic7Zrr/7RBO/PM8NNEqdP7vHMLdL2g7KKqlnQtkwEZIIYAjWfPf2Mg/17bG1IP1icWTg8iyYYGMDaGqOhE2E/gUwneglAc+uriwjrAKAk0QBsOJrIuTnD5y1YlNOyzne3ygaKtpl2os54t+UWDDqQ4GSxw2MBbYkq7ijSypujmo4k3e5XhE+6JkDa2fYL62X6eUvbMXlrhUn1yOsv10PDdnL9S0Ss/FUfZKYYHWr0IGPzDpK6fbYPr5I3zJBFw96Ngn2bXB+pSpIefgNHKUSwTyBqrQNJ0fJaFi2bDEAWpzO3k3udM62hBTQ1kseoger43Xw/BxpOmsmP1Ref/xnhlITPySblpH1mvyTpxCDeOZo44nS/NsQIsC6xCTOuz3S4r8VVzfq/lHx6IaWBS4IbG0VCbni77AmsmwZHl85x2W+H6o9s2zlqHurtNyLvZMXxwiplXFbfqt76nWPsw+zZ5nWOByvDmbYDRKaKst0RZLxAJD5m+45tS2R0d+3dFafQdUVRSdS2+QWjG+tatxgfzupMJMz6Dbr1G3W8N9j8XYUDeaco9/iv9MMW6DmJP4djRhv+j7/l/FfPFC
+sidebar_class_name: "delete api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Resource Group"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/rbac/resource-group"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete an existing resource group.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["resourceGroup"],"properties":{"resourceGroup":{"type":"string","description":"The name of the resource group."}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Resource group deleted successfully."},"400":{"description":"The request was malformed or invalid.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"401":{"description":"The provided authentication credentials were invalid."},"403":{"description":"The authenticated user does not have permission to access the requested resource."},"404":{"description":"The requested resource was not found.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"An internal server error occurred. Look at the server logs for more details."}}}
+>
+  
+</StatusCodes>
+
+
+      

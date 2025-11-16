@@ -1,0 +1,71 @@
+---
+id: create-new-role
+title: "Create New Role"
+description: "Create a new role in the system."
+sidebar_label: "Create New Role"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVcFu20gM/RWCZ9VJ2u5hdXOKoiiw2A2S9GT4QM/Q1rSjGZUzsiMY+vcFNUrtNOluDz30JIkiH/keOZwjWk5GXJddDFjjO2HKDASBDyDRM7gAuWFIQ8rcLrDCTLuE9Qpvr5fvcF2h8NeeU76OdsD6OH06YYt1lp4rNDFkDll/Udd5Z0hTXXxOmu+IyTTckr7loWOsMW4+s8lYnQGtUCvRXJ3EjiU7TlMqtZ4iUxYXdlh9R+m+YQjUMsTtxESjFjiOFWaXFWBicqtY46hm4dTFkEqO15dX+ngKqc5gJqkspN4YTmnbez8scKzw7eXl8xCtYlYKDpSgJb+N0rKFKODCnryzqu4vkYtFojzXq5ifCXYuxXuRDxxYnJnFePsSfyXTSdw7yxaozw2HPFeqslj9JJ/gwMInchPam5fRzkDYQp9YwEZOEGKGhvYMHUvrUtIMOQJNkpd2FlHZgnCKvRieM/35g76RFyY7AD+4lNNvqfnVD1R6HKCOBh/JgkuQYwRPsuPfkcgfL52EZQAXMksgD4llzwITNkRjehG2C/grxi9AuSye4uLjLsE2CrRRGCxncj6VY5zY9OLygPXqiNeUnFn2ucF6tR7XFbacm2ixxi4mpdqR/sML2ZC5mDbICeFOBSp0z3C+UW5y7tR78sIaN+ozlaAK35724PsHaruym8qO+qZWhS5s44T5KFowXgd8efMR7iauL24wDlmGLrqQJxXIeziPnCcjAQULJrZtH+bu61zsWVKB2l8u3iyutA6Vo6VpLnQ7nnb/33yA26LLkzKOp/H6qWuiaJb5IV90nlzQpL14BSo9WKH2QKdv3u6Ndqhe4fG4ocSfxI+jmr/2LNrcdYV7Ekcb1W21HitsmCzL1PcvPGhdpcJX95pc3X2vRTw7DGP1GLE0hrv8n77nQ3Tzz909VriZL7s2Wo0ROigNOmCNWGGcFCtXlNqO6Cnsetqpb8HUoaGn01WmqZqfymn+QWE4q28Sp4zmp6SnqOVxxGqm08+mieH/xd9QSoco9iy+m004rsdx/BfwtM6b
+sidebar_class_name: "post api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create New Role"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/rbac/role"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new role in the system.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["role"],"properties":{"role":{"type":"string","description":"The name of the role."}},"title":"RBACRole"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":"Role created successfully."},"400":{"description":"The request was malformed or invalid.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"401":{"description":"The provided authentication credentials were invalid."},"403":{"description":"The authenticated user does not have permission to access the requested resource."},"409":{"description":"Role already exists.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"An internal server error occurred. Look at the server logs for more details."}}}
+>
+  
+</StatusCodes>
+
+
+      

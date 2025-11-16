@@ -1,0 +1,63 @@
+---
+id: get-current-user-information
+title: "Get Current User Information"
+description: "Retrieve information about the currently authenticated user."
+sidebar_label: "Get Current User Information"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMFu3DgM/RWCZyOZbLuXuWWLIiiwWBRNexrMQSMxY7WypFKUs4OB/31B2WmdTootsHuyTZOPT3yPOqOjYtln8SniFj+QsKeRwMeHxIPRMJhDqgLSE9jKTFHCCUyVnqJ4a4Qc1EJ8hR2KORbc7vBTIS6475Cp5BQLFdye8bfNRh/PO95Xa6mUhxrgKRkevfRPvRr2mo72sSkKRVE0k3NQFj7F689FIc9YbE+D0Tc5ZcItpsNnsoLK52v1TE5JeocdRjMQduh8ycGc/tKvfYeZUyYWP/P2bgVVhH08asmzY3zsCWr1DtJDm9Q8kWlp8EvlmnlRvib2SyhLwUtoU4fiJSiACvRhGTdOk/56vbm5VEcRM6fRO3JrzdUWlsnppwkFHonVM6MJ3jXerzevXka7NA64RAViEujNSJCJB1+KdpAEprmjnUK1o6JVTCVVtjR3uvlJpyUfsjmFZBz4ApISBMNH+t9MRMyJLy0zhy8EW0vwlvmOIrG3iwC/v7QetxF8FOJoAhTikRgaNiTbFsRdwZ8pfQEzL+iSEtKxwENiGBITOBLjQ5kdUMhW9nLC7e6Mf5ji7W2VHre7/bTvcCDpk8MtHklPmo3+wmuVqVy3TXmqv9fxzIddoXw7cC+SNbtl4RYPmtMI6Cq3xKc5RBtU99v37+C+0X/R1xSFTzn5KO1gJgRYVy5iFzDRgU3DUOMiqEo9EpcZatxcvbq6Ud/kVGQwTep5R/GOBN4st44uCLz7fuv8yOn83T7/+dKcJyb0t1znYHxUdpWDNpkF2GETAFUf9Vqfimj0fD6YQp84TJOGv1Zi1XXf4WjYm4POd7efOuzJOOIm+Rc6qa2spawKjyZU7X6xAc/ccPf2I3Zonks8S9otT8Vefph4WiE3krM/dKg662nCbiFSlxBO3b/XvzelPCZ2q/q8hHDaT9P0D8txYDY=
+sidebar_class_name: "get api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Current User Information"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/users/me"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieve information about the currently authenticated user.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response with current user information.","content":{"application/json":{"schema":{"type":"object","required":["id","name","displayName"],"properties":{"id":{"type":"string","description":"The uuid of the user."},"name":{"type":"string","description":"The name of the user."},"displayName":{"type":"string","description":"The display name of the user."}},"title":"UserResponse"}}}},"401":{"description":"The provided authentication credentials were invalid."},"403":{"description":"The authenticated user does not have permission to access the requested resource."},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"An internal server error occurred. Look at the server logs for more details."}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: delete-role
+title: "Delete Role"
+description: "Delete role from the system."
+sidebar_label: "Delete Role"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVUFv2zoM/isEz17avvUd5lu6BcMDdhi67hTkoFhMrE2WPFJOFgT+7wMld0nXbLu8Q0+2afIjv48UdURL0rDrk4sBa3xHnhIBR0+w4dhBagnkIIm6GVaYzFawXuL93fwtripk+jaQpLtoD1gf86djslgnHqjCJoZEIekv0/feNUbTXH0RzXVEaVrqjL6lQ09YY1x/oSZhdQa0RK1Fc/Uce+LkSHIqtZ4iJbELW6x+ofPQEgTTEcRNZqJRMxzHCpNLCpCZ3CvWOKqZSfoYpOT45/paH08h1VnAZp0syNA0JLIZvD/McKzw9lKMljFJBXsj0Bm/idyRhcjgws54Z1Xe/0UvYo78XLBifqbYuRYL5vcUiF0zqXF7fXOZTM9x5yxZMENqKaSpUmiYrH4aL7AnphO5jPb6MtoZCFkYhBhsJIEQE7RmR9ATd05EM6QIJkte+llEJQtMEgduaMp0+8cmnPnnfmiiTRzCC23Cm8tTCE5AkvMejIjbBrKqjsonL5LHzW/a/3gyenPw0VillWIEb3hLL5HIv5eO+DyAC4k4GA9CvCOGjA2xaQZmsjP4EONXMKms1OLi41ZgExm6yASWknFeyoISagZ26YD18oh3RlwzH1KL9XI1rirsKLXRYo1lEWGFvdG/eMVr01zl7XjC+KQSFcJnSD9Jtyn16p29sMa1+uQiVOP7045ffDddX/Zu2b8/9arQhU3MmI+yhcbr2Z1//A8+ZbYXtzOFxIc+upCyDsZ7OI+cZkPABAtN7LohTP3XydgRS4HaXc9ez260jj5K6kyeDN38pzvtvmjypITjabj+evUVrRJ9T1e9Ny5osoG9ghTtl6ja69xNN1YbJan5eFwboc/sx1HN3wZibeuqwp1hZ9aq13I1VtiSscS541/pgDW+LdW9etDk6u4HLeLZMRirx4h501Cf/uh7Pj7vFh8WDwuscD1d4V20GsVmr0TMHmvECmPWq1y8ajuiN2E7mK36FlQdF/N0rsocVdNTWU0/TDicVZjlKUP5WfQEdTSOWE2EhsmUOf4t/qMR2Ue2Z/H9ZMJxNY7jD3EEGNU=
+sidebar_class_name: "delete api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Role"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/rbac/role"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete role from the system.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["role"],"properties":{"role":{"type":"string","description":"The name of the role."}},"title":"RBACRole"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Roles deleted successfully."},"400":{"description":"The request was malformed or invalid.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"401":{"description":"The provided authentication credentials were invalid."},"403":{"description":"The authenticated user does not have permission to access the requested resource."},"404":{"description":"The requested resource was not found.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"409":{"description":"Role is still assigned to users.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"An internal server error occurred. Look at the server logs for more details."}}}
+>
+  
+</StatusCodes>
+
+
+      

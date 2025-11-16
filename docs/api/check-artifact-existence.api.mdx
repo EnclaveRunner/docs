@@ -1,0 +1,71 @@
+---
+id: check-artifact-existence
+title: "Check Artifact Existence"
+description: "Check if a specific artifact exists based on its fully qualified name (FQN)."
+sidebar_label: "Check Artifact Existence"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVU1z2zgM/SsYnNoZjZO03YtvTptue+n0Y3PK+EBTUMSWJhUQcuv16L/vgGIcu3bd2V2fNALx8cAHPG6wpmTZdeJiwCm+bsl+A9eAgdSRdY2zYFhcY6wA/XBJEixMohpiACcJmt77NTz0xrvGUQ3BLAmevf304fkEKxRzn3B6h7OSIuG8ws6wWZIQ69EGNQKnmGLPlrBCpzgeeuI1Vsj00DumGqfCPVWYbEtLg9MNyrrLYcIu3ONQ/dTIXy3BmBJiA9LSto0JDtW2qumljXzWqmPKk1Xz55w1862fquhqCqIMna/XGyctcS65Ik4uBmhNaiEyiLk/gmauxVIXQ6Kk+V9cXupnP+tsf9i0CXx1zPHa1KDYKUlxujp0ug0jG+5vqovXy0Ovt5EXrq4pFJdXJ2DVkRKEWPCNAVdHciorBR50Zu2jqcElkBjBG74n3Q4bg1AQDTZd5501GnzxNWmGzSETcfGVrOxxdofEHDmvFceOWNx4uaP5kMWhQnHi1XTD/CcFYmdxGPTgj2P3/D4IcTAeEvGKGHLiSU6UyPbsZJ3X+NokZ2e9tDi9myvXS5I21jjFlkyNuvZ6hhePE4FPCb5opyPunTRb7K1Ih2Uy9X+hPhmBC03Mjo8tBevNimD28T18yXjx2LpQEF530QWBJjIY72E3svCWwIQabFwu+1C4UdbKsOMUV5eTl5MrHYEuJlmazFpZuFFIt2Nzo9NCIQvcHp7N0xScXXzH2xP6IRedNy4o0p69Fh3JuMMtGfMK25hEbZuNFrllPwxqHoVCKa5dMguvY9cYn+hEJ88+lwl9DqeE+BcYv9F690FYGd+rU9az/4zhV7J8EsP2eTgPhuMyfRJBeSr+f/1/K9cnUe09J0/Y5vrDTsFlFajy7hPn6RkjZ9ZSJztRB8q3px3vbmZvsMo87AjCKABV+WrycmDCeid1HuRRTW6TitiShgEfe+iLKV/p7+I/mpS+R6534rtiwmE+DMM/UCQtEw==
+sidebar_class_name: "head api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check Artifact Existence"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"head"}
+  path={"/artifact"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Check if a specific artifact exists based on its fully qualified name (FQN).
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"source","in":"query","required":true,"schema":{"type":"string"},"description":"The source of the artifact."},{"name":"author","in":"query","required":true,"schema":{"type":"string"},"description":"The author of the artifact."},{"name":"name","in":"query","required":true,"schema":{"type":"string"},"description":"The name of the artifact."},{"name":"identifier","in":"query","required":true,"schema":{"type":"string"},"description":"Either the version hash or tag of the artifact."}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Artifact exists."},"400":{"description":"Bad request."},"401":{"description":"Unauthorized."},"403":{"description":"Forbidden."},"404":{"description":"Artifact does not exist."},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"Internal server error."}}}
+>
+  
+</StatusCodes>
+
+
+      

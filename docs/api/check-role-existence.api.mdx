@@ -1,0 +1,71 @@
+---
+id: check-role-existence
+title: "Check Role Existence"
+description: "Check if a specific role exists in the system."
+sidebar_label: "Check Role Existence"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMFS2zAQ/RXNntUECr34ltC05cYEOGVyUORNLLAlsZIDqUf/3lnZkEDSdqbTk5PV2923+57UQYlBk/HROAsFXFWoH4VZCyWCR23WRgtyNQp8MSEGYayIFYqwCxGbEUiIahOgWMB8OrmCpQTCpxZDnLpyB0WX/xrCEopILUrQzka0kY+U97XRihuPHwJ37yDoChvFv+LOIxTgVg+oI8iDQgtgQtzLk/NI0WDIrTi6zwyRjN2A/DDgXYXCqgaFW+dJOGsEKUmIJnKBPMmca6XEYcLgnQ19j89nZ/x5X3K+388IkoTLU6CpKsWwmwF0fgy6t6qNlSPzE8sBdXGM+uZoZcoS7QC5/A2l0mEQ1sWeWw8+P1GPVzJQE17taqdKYYKIzola0QZZ5v+iGxI5OhauDx8pd6jJjOg7WiSjB1W+nNrxtY1IVtUiIG2RRC7cixtQt2TiDopFB1MVjJ60sYJisUxLCQ3GypVQQIWqBAle8RmMaaX0OPtqX+GWR+2JH9R5I1/F6BmdUVDAijGZAu9qvr8dsxfV+N6xvXPf5pZg7Nrlmq/jW12rLYrJzbW4zbOd9DXaSDvvjI1i7UiouhaHmYPGQShbCu2aprWDjqzwFin0pbZno4vROfPwLsRGZYX5zry9D9leM3YVWo0fuXR7t/zDe9KvMeJLHPtaGcs8Wqq5bC/LAlgWttbwDFQuRA533UoFvKc6JQ4/tUis91LCVpFRK17lYplkVhkpW+ERd8yy5/vpjpszvG6ZxJHTk3zNmGiNPv4Re+irH7PJV5CwGl7FxpWcQ+qZx1DPUABIcHl//VvGsQ5qZTet2jC2r8k+Uu8N1xtMDl+eaThQdnfALy+nd+t94FvSYEogh3HaIZQn/Fv+jQrh2VF5kO+HEKRlSukXwF8poQ==
+sidebar_class_name: "head api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check Role Existence"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"head"}
+  path={"/rbac/role"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Check if a specific role exists in the system.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["role"],"properties":{"role":{"type":"string","description":"The name of the role."}},"title":"RBACRole"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Role exists."},"400":{"description":"Bad request."},"401":{"description":"Unauthorized."},"403":{"description":"Forbidden."},"404":{"description":"Role does not exist."},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"Internal server error."}}}
+>
+  
+</StatusCodes>
+
+
+      

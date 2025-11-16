@@ -1,0 +1,71 @@
+---
+id: update-current-user-information
+title: "Update Current User Information"
+description: "Update information for the currently authenticated user. Only provided fields will be updated."
+sidebar_label: "Update Current User Information"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVktvGzcQ/iuDOW9kO2kP1c1JgzZAH0ZinwQdRsuxlgmX3Ay5khfC/vdiuCtrJbmuUxRFTivxMZzvMUPu0HAsxTbJBo9zvGsMJQbr74PUpINwHwRSxVC2IuyT64DaVLFPtqTEBtrIMoM/veugkbCxhg3cW3YmwtY6ByuGNkc1Myww0TrifIF3kSXiskDhry3H9DaYDue7/NcKG5wnabnAMvjEPukUNY3TM23wF5+jprvDWFZck/5KXcM4x7D6zGXCAhsJDUuyHHXW8/YPqnmyMCaxfo3FCQG3FYPnLXiq+RT6ABX7QsPdUIzbIOblIZtxx7Nhf7axcdR9W7Jm2PRs0n2BySan0W4oldXvjH2vo8KxCT4OPL2+vNTP8THvJpH2WkJsy5JjvG+d61TYfy3UQfEFWoMFKgqFOmFieaqnfSHvbWsNhPtMyIHml5OrhJ5uN98q0ZE8x9EmqmhFfBy1GKX54Sk1NOJYNLClCDU5LVY2EASs35Cz5j8ThEWCnNM/DJ+Bn8J5L/ILexZbPoK5ehrMY9eY9BVtPKWw0b/kImxZ+AAuR3vzdLTz5gQmcAQfElS0YWhYahujnpACUHZxlmQklQ0Ix9BKyeNJP52fpGIBOWEyHfCDjUm7XapyoH3/+C5VuPob3vaWaqhzgQzYCCkEcCTr7xLIj0/VxrUH6xOLJweRZcMCOTaEMrdDM4PfQvgClLJQ4xIX1jG3zToIg+FE1sWhOCOXrdjU4Xyxw7cUbXndpgrni2W/LLDmVAWDc2y0o+qlQzqJF2q7eJHb2D7CJyVogDuJ8wi5SqnR1XkVznGla3IKyvDHwyX5/oHqxvHRpXZoPkcX09Hw0cXyyHCBetXnPPZE+9JpmVzffIBPmZ8nexr7JF0TrE+ZOXIOpjtHN0Ugb6AMdd360THqpQ1LHEJtLmdvZleaRxNiqil7aejP+7fI/vbJJffh8DA5TWt3sOj/8IwZVEv8kC4aR9YrhFacpjGYYIHZBKguUcdXISYd3e1WFPlOXN/r8NeWRd21LHBDYmmlIiyWfYEVk2HJxvvCnV7DA7xXt3q2Lnet5nBWjX2x33FdltykZ9dOXXxzffvuVyxwNb7F6mB0k9BWy5i2OEcsMGS+s5Hz2A4d+XVLa107BFXb0rG/Bz8X41dBjRPku0mCmZ2hOFRvdULfYzHiacehDPGf9u/rYLJ//wLDftn3/V+ugdaF
+sidebar_class_name: "patch api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update Current User Information"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/users/me"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Update information for the currently authenticated user. Only provided fields will be updated.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"newName":{"type":"string","description":"The new name for the current user."},"newPassword":{"type":"string","description":"The new password for the current user."},"newDisplayName":{"type":"string","description":"The new display name for the current user."}},"title":"PatchMe"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Current user updated successfully.","content":{"application/json":{"schema":{"type":"object","required":["id","name","displayName"],"properties":{"id":{"type":"string","description":"The uuid of the user."},"name":{"type":"string","description":"The name of the user."},"displayName":{"type":"string","description":"The display name of the user."}},"title":"UserResponse"}}}},"400":{"description":"The request was malformed or invalid.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"401":{"description":"The provided authentication credentials were invalid."},"403":{"description":"The authenticated user does not have permission to access the requested resource."},"409":{"description":"User already exists with the new name.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"An internal server error occurred. Look at the server logs for more details."}}}
+>
+  
+</StatusCodes>
+
+
+      

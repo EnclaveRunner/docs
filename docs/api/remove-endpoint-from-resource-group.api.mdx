@@ -1,0 +1,71 @@
+---
+id: remove-endpoint-from-resource-group
+title: "Remove Endpoint from Resource Group"
+description: "Remove an endpoint from its assigned resource group."
+sidebar_label: "Remove Endpoint from Resource Group"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVcGO2zgM/RWCZ29mpp29+JbpBsUCPRTT6SnIQbGYWK0supScNAj87wvKzsSTSbuLRQ/NxbFMPT4+PlFHtBQrcW1yHLDER2p4R2ACULAtu5BgI9yASxFMjG4byIJQ5E4qgq1w186wwGS2EcslPj7M3+GqQKFvHcX0wPaA5TG/OiGLZZKOCqw4JApJP5m29a4ymv7mS1QOR4xVTY3Rf+nQEpbI6y9UJSwmQEs8EczLA6H3ykfzt8ItSXIUFeU58owYk7iwxeKi/KeazoUnBhnkeJbgsvL+Mvd/yhBMQ8AbSDW9Rsy/DNtyiEMBb25v9fESaXHiOZC0A8uXeBC7qqIYN533h0z3/hrUUyaSWwZ7E6ExfsPSkAUWcGFnvLPa5l/TNxGWK03Ky6/0Uy2SS16XFiLvKZC4CgeR7m/vrhfTCu+cJQumSzWFNDKFSsjqq/ER9iR0Li6jvb2ONgEhC10kAcsUIXCC2uwIWpLGxagZEoPJko/dzaJOzsyY6f6nTZieMe2HJtpwF37PJtz9QLaTo1pz8GwsuAiJGbyRLf2Ohfx57WjMA7iQSILxEEl2JJCxgauqEyE7gw/MX8Gk3PAxxPM2woYFGhYCS8k4H2c5faSqE5cOWC6P+GCiq+ZdqrFcrvpVgQ2lmi2WaMlTIiywNfoVb2RtqpvJzDvhfFKZhqInaM+F1ym1Gp2jsMS1xmQiqvPjeU4vvpumVWGm8/I8xS7G3LOgBbqw4ZzwpGuovB6K+ce/4VOW4wdjNslhvGFYwHgP052jeSKYYKHipunCaBC1zo4kDlC729nb2Z3yaDmmxmTr6IA9X2aLFzfZ4+lgDZVcUDueXfm/78JB+ETf003rjQtKrhOv4EMzl6jNxOIs9KrAmmPST8fj2kT6LL7vdflbR6JeWRW4M+LMWjVervoCazKWJNvoKx2wxHcD8z+elICG+06JvDpbfXHaMa8qatNPY6ee/GvxYfG0wALX473esNVdYvbqELPHErFAzlpmR+a1I3oTtp3ZauyAqv4zL406GLMYn1rV+MGEw4Rhlmdw+eeox7KhvsdiLKgbl3KN/7b/o4lxz2In+9txCftV3/f/AOQ/MNY=
+sidebar_class_name: "delete api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove Endpoint from Resource Group"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/rbac/endpoint"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Remove an endpoint from its assigned resource group.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["endpoint","resourceGroup"],"properties":{"endpoint":{"type":"string","description":"The endpoint to remove from its resource group."},"resourceGroup":{"type":"string","description":"The name of the resource group."}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Endpoint removed from resource group successfully."},"400":{"description":"The request was malformed or invalid.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"401":{"description":"The provided authentication credentials were invalid."},"403":{"description":"The authenticated user does not have permission to access the requested resource."},"404":{"description":"The requested resource was not found.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"An internal server error occurred. Look at the server logs for more details."}}}
+>
+  
+</StatusCodes>
+
+
+      

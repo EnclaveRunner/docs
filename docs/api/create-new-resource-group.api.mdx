@@ -1,0 +1,71 @@
+---
+id: create-new-resource-group
+title: "Create New Resource Group"
+description: "Create a new resource group."
+sidebar_label: "Create New Resource Group"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVcFu4zYQ/ZXBnLVO0t0eqluyWAQFijZIsifDhzE5trhLkdohZccw9O/FUHJs12lz6WF9kUXNvJn35pHco+VkxHXZxYA1fhamzEAQeAvCKfZiGNYS+26GFWZaJ6zn+Hh3+xkXFQr/6Dnlu2h3WO/LqxO2WGfpuUITQ+aQ9RN1nXeGtMzVt6S19phMwy3pv7zrGGuMy29sMlYnQHM8dHGvTWjRTmLHkh2nsebp5yNWyuLCGqt/EHxuGAK1DHEFueELjkP5aQepiyGNNX65vtHHOdLjWSaYopyF1BvDKa1673czHCr8dH19mfxcShfxYEsJWvKrKC1biAIubMg7q4L/LwqySJRL5cblC8WUfXbZ69IXkXsOLM7gKMunt5RQMp3EjbNsgfrccMhTpyqL1VfyCbYsfCRX0D6+jXYCwhb6xAI2coIQMzS0YehYWpeSVsgRqEg+zbOIyvZ1slOl396dIHlhsjvgF5dy+inVv/kXvQ5W6mjnI1lwCXKM4EnW/DMS+fWtPXEbwIXMEshDYtmwQMGGaEwvwnYGf8T4HSiXSU8hPq4TrKJAG4XBcibn06yUT2x6cXmH9XyPd5Scue1zg/V8MSwqbDk30WKNXUxKtSP9hleyJHN1MM+HYg08Yj2pVCPxE8RX8k3OJbpEYY1LjSnNqNaPx+Pyywu1nYpzcYK9ClihC6tYwA86BuPV/bcPv8NTof/m+cYhy66LLuQiDHkPp5mTWRJQsGBi2/ZhMoRaZcOSRqjN9ezj7Eb7UIVaKlbRs/N4T/zJW3jdRfeTVGcN7Y/ee/dyGSXM/JKvOk8uaOlevIKMw5mjDqfY8mw8iwobHWI9x/1+SYm/ih8GXf7Rs+j8FxVuSBwtVcf5YqiwYbIsxRrfeafdjX1+eNY2NNz32s7FfhmqQ8atMdzl/4w99dnDX0/PWOFyuizbaDVHaKuEaIs1YoWx6DbebLq2R09h3dNaY0dMdROd2260WTU9ldP0gcLupL8izujZr0k3WsvDgNVEp5+WCsP38h8opW0Ue5LfTUs4LIZh+BvuR+oC
+sidebar_class_name: "post api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create New Resource Group"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/rbac/resource-group"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new resource group.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["resourceGroup"],"properties":{"resourceGroup":{"type":"string","description":"The name of the resource group."}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":"Resource group created successfully."},"400":{"description":"The request was malformed or invalid.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"401":{"description":"The provided authentication credentials were invalid."},"403":{"description":"The authenticated user does not have permission to access the requested resource."},"409":{"description":"Resource group already exists.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"An internal server error occurred. Look at the server logs for more details."}}}
+>
+  
+</StatusCodes>
+
+
+      

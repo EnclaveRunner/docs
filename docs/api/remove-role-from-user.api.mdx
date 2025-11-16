@@ -1,0 +1,71 @@
+---
+id: remove-role-from-user
+title: "Remove Role from User"
+description: "Remove role from user."
+sidebar_label: "Remove Role from User"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVcGO2zgM/RWBZ29mZjt78S3TBosCPRTT6SnIQZGYRK0sqpSUNAj87wvKzsTtZGd72ENzcUyRj+TjM3UCi8mwi9lRgBYesaM9KiaPasPUqZKQZ9BA1tsE7RIeH+ZvYdUA47eCKT+QPUJ7qq+O0UKbuWADhkLGkOVIx+id0ZLg5kuSLCdIZoedln/5GBFaoPUXNBmaCdASJPd7K0byKEkjU0TODpOEjscXkJTZhS00P/X0tENVirOKNirL/9pSP8L+UnjQHZ7DKzeZFA9UVZYmsPUnfaRIIQ2V/nl7K4+fqBacAcReuFapGIMpbYr3x1rl/bVgKWocgTropDrtN8QdWkWsXNhr76yM7X+ZAzITv+R/ML/gT7rPLgu1sGD+GwOyMzDQcn97d72ZyLR3Fq3SJe8w5LFSZRitvGqf1AEZL81VtDfX0SYgaAdeLWFSgbLa6T2qiNy5lCRDJqUr5cN0B1LRKsZEhQ2Ome5fHcLEv85DEm2ohN9zCHf/QttZUVEfPWmrXFKZSHnNW/wdG/nr2qcxD8qFjBy0Vwl5j6wqtiJjCjPamfpA9FXpXAc+unjaJrUhVh0xKotZO59mNX1CU9jlI7TLEzzo5My85B20y1W/aqDDvCMLLVj0mBEaiFpO4YbX2tyI9uCC8UkoGhqeID03vcs5inf1ghbW4lOLEI4fLzt38V13cdhe5zV42V/DXntmsAEXNlSznIkMxstXMP/4Xn2q/V/dehgyHyO5kCsz2ns1jRzVkpQOVhnquhJGRYhW9shpgNrfzt7M7qSOSCl3umpFNurlvnl8vm8+p5fFnC7Ce+WCGhjM+D3fRK9dkISFvYQPE1mCTASaypgIcEcpi/l0WuuEn9n3vZi/FWQZ9qqBvWan18LZctU3sENtkasOvuIRWng71PXHkyQXd1+kiBcfR9+cI+bGYMyv+k5F9W7xYfG0gAbW40XbkZUo1gcZtD5AC9AAVaaqrKrtBF6HbdFb8R1QRUT6R7UN6mrGp3Q1HuhwnFRY6RmkKtORyfU9NGNDZTTVHv8r/qNO6UBsJ/FxNEG/6vv+H/VU99A=
+sidebar_class_name: "delete api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove Role from User"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/rbac/user"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Remove role from user.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["userId","role"],"properties":{"userId":{"type":"string","description":"The uuid of the user."},"role":{"type":"string","description":"The name of the role to remove from the user."}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Role removed from user successfully."},"400":{"description":"The request was malformed or invalid.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"401":{"description":"The provided authentication credentials were invalid."},"403":{"description":"The authenticated user does not have permission to access the requested resource."},"404":{"description":"The requested resource was not found.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"An internal server error occurred. Look at the server logs for more details."}}}
+>
+  
+</StatusCodes>
+
+
+      

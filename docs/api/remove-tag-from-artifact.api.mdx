@@ -1,0 +1,71 @@
+---
+id: remove-tag-from-artifact
+title: "Remove Tag from Artifact"
+description: "Remove a tag from an artifact."
+sidebar_label: "Remove Tag from Artifact"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVk2T2zYM/SsYnNX9aNKLbpt203Ym00mTzcnjA1aELSYUqQUpbzwe/fcOKGqtet1kDz3EF9sU8PAAPEA8YKJtxHqFN5LshpoUcV2h4diI7ZMNHmv8wF3YMRAk2sJGQgfkgYr9BVYo/DBwTG+C2WN9yH+tsME6ycAVNsEn9kkfUd8725ACX36Oin7A2LTckf5K+56xxnD/mZtUcCegFW4ePFa4Y4k2+D8otlgpd2XbS+hZkuWoIGp4BuvfKb0dnNvDw0DObiwb8NQxhM25xGYCMQzSMFZIQ2qDYIXq9Dx+sTtSiEms3z6jcNcyTLYaOLW8iDw+RXkRzGR7FiZzfBHIXIITiLHCZJNT57d//6WQyx68CLk4QEuxPY0AKcDgE20zW23oiyBViSmATMrMmjzlrR/tYOyDj1Nrfr660q8TONoWHFPEPVOLQ9NwjBvVSqb3+qx/y1AGAB4pQkduE6RjA0HA+h05a1RL/8sUsEiQ55qbjp9Vbtm8W5Hf2bPYBqfKvL66Pp9ML2FnDZssK/apMIVG2OhfchEeWfiYXEZ7dR5tAcIGhsgCJnAEHxK0tGPoWTobs0BSAMolz80sRWUDwtOglEivv9mEhX3uhwbahMH/mE24/o+yzYrqae8CGbARUgjgSLb8Iybyy7nRuPFgfWLx5CCy7FggY0NomkGEzQW8C+ELUMoNLyYubCNsgkAXhMFwIuvitIkiN4PYtMd6dcA3FG1zM6QW69V6XFfYcWqDwRoNO066qnvSp3g5j/SlLpgjzEet0pTzAuwp7zalXq2zFdZ4rzaZh5b5w/Gld/uVut7x4u0zvwSOO2ze58eTaTU/VfdksR7t8lJcmFm/CZnl3AvfOB2km/d/wsdcwrMrk32SfR+sT7m45BwsPYvgIpA30ISuG3wR1cXxvYs17q4uXl1cK48+xNRRTrekUi4Kd/M1Yb5TnPI5HOX7/ctFaUbir+myd2S9xh7EKczU3xXSMVC5E7QhJn1yONxT5E/ixlGPHwYWVc+6wh2JpXut4Go9VtgyGZYsrC+8xxp/nSj+dKfx1dwNyuPZtI3V7HHTNNynb9ouVfrb7bvbu1us8L7cm7pg1EvoUeeUHrFGrDDkomWR5rMDOvLbgbZqO6GO5b6w0O6k1ap8a1blAfn9gmEuzyT8T1EHteNxxKokNJSjnOP3/N9TjI9BzMK/L0c4rsdx/Ac1Ppy9
+sidebar_class_name: "delete api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove Tag from Artifact"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/artifact/tag"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Remove a tag from an artifact.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["fqn","versionHash","tag"],"properties":{"fqn":{"type":"object","description":"Fully qualified name of an artifact.","required":["source","author","name"],"properties":{"source":{"type":"string","description":"The source of the artifact."},"author":{"type":"string","description":"The author of the artifact."},"name":{"type":"string","description":"The name of the artifact."}},"title":"FQN"},"versionHash":{"type":"string","description":"The version hash of the artifact to untag."},"tag":{"type":"string","description":"The tag to remove from the artifact."}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Tag removed from artifact successfully."},"400":{"description":"The request was malformed or invalid.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"401":{"description":"The provided authentication credentials were invalid."},"403":{"description":"The authenticated user does not have permission to access the requested resource."},"404":{"description":"The requested resource was not found.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"An internal server error occurred. Look at the server logs for more details."}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: tag-artifact-version
+title: "Tag Artifact Version"
+description: "Assign a new tag to a specific version of an artifact. If the tag is assigned to a different version already, it will be moved to the new version."
+sidebar_label: "Tag Artifact Version"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVk2T2zYM/SsYnFXvbrO96OZ0kjYznXbbbHrx+ACLkMSEIrUkZcfj0X/vgKJtxeume+hhfbFNAQ8PDx/iARWHyus+amexxGUIurFAYHkHkRqIDghCz5WudQVb9kE7C64GskA+6pqquIAPNcSWk4MOQAmE1eSsdF2zZxtP3mQ8k9oXoCPstDGwYejcdnIQHAmejRdYYKQmYLnCZY4XcF2g56eBQ3zr1B7LQ/qrPSssox+4wMrZyDbKI+p7oyuSDG8+B0nzgKFquSP5Ffc9Y4lu85mriMUMaIX1k8UCM5NfKbRYoOXdIzXCoPeuZx81B8ER2ytw38r7fjBmD08DGV1rVmCp40sxLzgEN/iKsUAaYuu8MKCOn8fPdmcKIXptm2cUHluGyVYCi9rnyOMpyotgJturMInji0COElxAjAVGHY04v//zd4Gcl+FFyMd2aym0lxFSp1EzcZ0q+jK2s7GYRiW37An41Ldj+kgxQ+9smKr04+2dfF0AU/PtzFxgQRiqikOopXsS5fvb2yswLUOeCthRgI5M7XzHCpwHbbdktJLu+l9Gg713/nkXTsfPpJyX8533v7BlryucBLq/qknL0Hu31YpVajS2MTOFyrOSv2QC7NjzObmE9uY62gyEFQyBPSjHAayL0NKWoWff6ZAElyIkyVNts6iswPM0OjnS/XeLMLNP9ZBAtRvs6yzC3b/IduyonvbGkZL9Hp0DQ77h15jIT9dGY2lB28jekoHAfsseEja4qhq8Z7WA35z7AhRTwbOJcU2A2nnonGdQHEmbMO2mwNXgddxjuTrgWwq6Wg6xxXK1HtcFdhxbp7DE3gVJtSd5hjfHwb6JJOvlCPJRNJoynkGdsm5j7MU6WWGJG7FJLETkv87vwXdfqesNz95Gx5fCeaUd9/v5ZFrVJ20vFu3MLq/JmaW2tUtEj8WwlZFJWj58gI9Jw6tLlG30+95pG5O6ZAzMPXPHBSCroHJdN9jcVYvz2xhL3N4u3izuhIfI3FHKOGcjK/V4XYC/s8sFl8O5d1/pvWeqf+Sv8aY3pK3kOngj1KeWWuGRy3RNkhFqpefKFR4OGwr8yZtxlOOngb2067rALXlNG6nYaj0W2DIp9qmTv/AeS/x5kuWHR4kv5mYQHs/GeyyOHsuq4j5+13Y+Fg9/fHzEAjf57tY5JT6edrIWaIclYoEulSlNRTo7oCHbDNSI7YQ55gvLbFim4Sjyt+SUH5Ddz/glcaZJ+xRkL3Q8jljkdIZ8lDL8L/8HCmHnvJr59/kIx/U4jv8AzZT16g==
+sidebar_class_name: "post api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Tag Artifact Version"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/artifact/tag"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Assign a new tag to a specific version of an artifact. If the tag is assigned to a different version already, it will be moved to the new version.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["fqn","versionHash","newTag"],"properties":{"fqn":{"type":"object","description":"Fully qualified name of an artifact.","required":["source","author","name"],"properties":{"source":{"type":"string","description":"The source of the artifact."},"author":{"type":"string","description":"The author of the artifact."},"name":{"type":"string","description":"The name of the artifact."}},"title":"FQN"},"versionHash":{"type":"string","description":"The version hash of the artifact to tag."},"newTag":{"type":"string","description":"The new tag to assign to the artifact version."}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":"Tag assigned to artifact version successfully."},"400":{"description":"The request was malformed or invalid.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"401":{"description":"The provided authentication credentials were invalid."},"403":{"description":"The authenticated user does not have permission to access the requested resource."},"404":{"description":"The requested resource was not found.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"An internal server error occurred. Look at the server logs for more details."}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: delete-rbac-policy
+title: "Delete RBAC Policy"
+description: "Delete an existing role-based access control (RBAC) policy, if it existed."
+sidebar_label: "Delete RBAC Policy"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVU1vGzcQ/SuDOdkGI9tNetFNtgWnQIAKsXKSdKCWI4kJl9wMuZIFYf97MdyVtbbVFgVy6Gm5Q87Xm8fHAxqKBdsq2eBxiA/kKBFoD/RsY7J+DRwcfVjqSAZ0UVCMUASfODi4+Ho3ur+EKjhb7BXYFdjU+pEZoMKk1xGHM5RjuFDI9LOmmO6C2ePwkH8tk8Fh4poUSljySbZ0VTlbaCnq+nuUyg4Yiw2VWlZpXxEOMSy/U5FQ9QLNUKrNphhqLuiRQ12hwoq4tDFKkwuFFYeKOFmKuQ5xOYWNia1fo3qDzHRD4HVJEFaQNpRhGcBFYJjj1RxhFRi0c9keL7F5W8N/T9C5w1r8z6Z6daJN2mv0TEbydSkoPY6nqHDy51P+jKb3n1Hhw/jLeDpGhZ/HowdUeCVQva9ROxd2ZOCUCS5osB4omEvcOcpCQrerqzleDrBpFCabBOhMh0nmDDZN0wJVBR/bafx2cyOf13nFpeMZmExRA7HObFzVzu0H0vqnc57TjGTmHex0hFK7VeCSDAQG67fa2czVX0I+Yg78nmCt+d04+piMmR/JE9uiw+TTze35ZioOW2vkMtZpQz51lULBZORXuwg7Yjo1l6N9PB+tF4QM1JEYTKAIPiTY6C31p5zCUQDSCVQyLzRsM93+TabjECq9d0EbsBFSCOA0r+n/OIDfz7Fp5MH6ROy1g0i8JYYcG0JR1MxkBvAlhB+gU8aoO+LCOuZLWwYmMJS0dbG9E5GKmm3a43B2wDsdbTGq0waHs0WzUFhS2gSDQ2w5LzqmZReveamL6/ZC4CnKk4DUttyL9dL2JiXRwgyl/C/lTC5DUP56Uufxsy6rVhRbcTwpyBtRO230hSfrS6PQ+lXI+Y8g+8IJqUaTP+ApY3NWBckn3lfB+vQidX3PjkkRtDdQhLKsfccW4dGWuCtiezP4OLjNohhiKnXmkSjs6Z3LujI5wviqksOJkb/4VWyHkeg5XVdOWy8V1uwkZTveGcp4BdO2soXCTYhJNg4HyfmNXdOI+WdNLNxZKNxqtnopMM8WjcINaUOcafWD9jjE+7abD1NJL8ddLWW8u2uNOnqMioKq9I9n+xx9eT6W3fteBiNerHfCG73DIaLCkPFtH16xHdBpv671Ws62UYWR+jV1W6qq7itddRva73sVZnha3n+Lck1LahpUXUN1Z8o9/pv/RMe4C2x6/lVnwmbRNM1fvo0odQ==
+sidebar_class_name: "delete api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete RBAC Policy"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/rbac/policy"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete an existing role-based access control (RBAC) policy, if it existed.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["role","resourceGroup","permission"],"properties":{"role":{"type":"string","description":"The name of the role. (or \"*\" for all roles)"},"resourceGroup":{"type":"string","description":"The name of the resource group. (or \"*\" for all resource groups)"},"permission":{"type":"string","enum":["GET","POST","PATCH","DELETE","HEAD","*"],"description":"The allowed permission (e.g., \"GET\", \"POST\", \"*\")."}},"title":"RBACPolicy"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"RBAC policy deleted successfully."},"400":{"description":"The request was malformed or invalid.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"401":{"description":"The provided authentication credentials were invalid."},"403":{"description":"The authenticated user does not have permission to access the requested resource."},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"An internal server error occurred. Look at the server logs for more details."}}}
+>
+  
+</StatusCodes>
+
+
+      

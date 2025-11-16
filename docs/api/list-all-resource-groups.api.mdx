@@ -1,0 +1,63 @@
+---
+id: list-all-resource-groups
+title: "List All Resource Groups"
+description: "Retrieve a list of all resource groups in the system."
+sidebar_label: "List All Resource Groups"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1v2zAM/SsEz17a7uOSWzYMxYAdhnY7BTkoMhtrkyWVpN0Fgf/7QDnZ0i3DgPkim6YeyfeedMCWxHMoGnLCJd6RcqCRwEEMopAfwMUITJIH9gQ7zkMRCAm0I5C9KPULbFDdTnC5xru3q3e4aZBJSk5CgssDvry+tuV5pfvBexJ5GCp6TYanoN1Z5d+qWh2fk1JSg3OlxOCdwV19FcM8oPiOemdvui+ES3TMbo8NBqVezuKiHNIOJ3safH1982eDnzuCwnkMLbXgBu0o6bEeeKbWPl0UeCImCGl0MbQLrGivLqOdgVALgxBDm0kgZYXOjQSFuA8iVkEzuEpQJZrpcSCxXSdO5ko3f6l0zIfi9jG7FoKA5gzR8Y7+h8a8/Upe0XR9HAJTa1oTc2YTu3AuxBpmtefwBaob1KDRQu+ZbykRB4+zAG8uOWSVICQlTi6CEI/EULEhez8wU7uAjzl/A6ezGeeUmHcCD5mhz0zQkroQZVHLC/mBg+5xuT7gWyfBrwbtcLneTJsGe9Iut7jEHdmkxdkvvOKt81fmyBcn6l/MdsRfgPfG1zz9GexPBjrVYtk1C5e4tZzaUUgPuSaeiEk+mhFWnz7AfZ0HmwvyUlLelxyS1knthJ7vPKov4FILPvf9kI4Km/YjscxQ4/Xi1eLGjFSyaO+q9snVHj/aGVzFCHenQ3h7mvpZP4dfXvr/y2OmSem7XpXoQrKWBo6GPsuwRpMBG7woxKbBLota2uGwdUJfOE6ThR8HYpN70+DoOLitsbzeTA125Fri6oRvtDe3eU/FhB9dHOrV8fvBeGaS2/efsUH3XOhZ2Oa4GvbpGkr7M+Ta5OySL2L+7mmasDk2MhxDODX/3v/JiTxlbs/2l2MIp800TT8AOtYMfA==
+sidebar_class_name: "get api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List All Resource Groups"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/rbac/list-resource-groups"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieve a list of all resource groups in the system.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response with a list of resource groups.","content":{"application/json":{"schema":{"type":"array","items":{"type":"string"}}}}},"401":{"description":"The provided authentication credentials were invalid."},"403":{"description":"The authenticated user does not have permission to access the requested resource."},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"An internal server error occurred. Look at the server logs for more details."}}}
+>
+  
+</StatusCodes>
+
+
+      

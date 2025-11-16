@@ -1,0 +1,71 @@
+---
+id: assign-endpoint-to-resource-group
+title: "Assign Endpoint to Resource Group"
+description: "Assign an endpoint to a specific resource group."
+sidebar_label: "Assign Endpoint to Resource Group"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVcFu2zgQ/RVizlon2WYvujlFUCywwAZJejJ8GJNjiy1FskPKrmHo3xdDybZcp+1isYf6IovivHnz3nB4AENJs43ZBg81zFOyG6/QK/ImBuuzykGhSpG0XVutmFLoWJPacOjiDCrIuElQL+D5Yf4elhUwfeko5Ydg9lAfyqtlMlBn7qgCHXwmn+UTxuisRkl98ylJ/gMk3VCL8i/vI0ENYfWJdIZqArSAI4sPQgIqOJKV/JFDJM6W0pB+uvMMmzJbv4Hqm/pfG1IeW1JhrXJDV+X2k1z/CuxCxkHcHN6GLj+pM8Xg00D/99s7eVziPh4xB0AyAnkJp1KnNaW07pzbq8Bqh0mhY0KzP4WVcu5vb68zvBZ+xccS2aJbB27JCJT1W3TWiPf/i5nEHPjauWH5SmSRKNvsZOmR+QN5Yqth0O7+LbmkmMhhaw0ZhV1uyOeRqdJMRl7RJbUjpnNxBe3d22gTEDKqS8TKBErKh6wa3JKKxK1NSTKI78WK0fQiKpmTX2Om+x+aMNlf/JBE69D5X9OEu+/IduyoiHsX0CibVA5BOeQN/YqF/PHW0Zh7ZX0m9uhUIt4Sq4KtgtYdM5mZ+iuEzwpzMXzc4sImqXVg1QYmZSijdWlW0ifSHdu8h3pxgAdMVs+73EC9WPbLClrKTTBQQwxJSo0o3+CGV6hvTqPojPIiIg0lT7BOZTc5y7wsUsr7SvYUGqLy83l0P37FNoosVyP0PO3Ok/AkZwXWr0NJeFTVaydHYv70p3opYnxnTmbeD1NNZELn1DRybJ2k0BulQ9t2fmwPaZwtcRqgtrezd7M74SF6tVgaRwb6+W57nEzk5+OhOl4kF8QO5478TxfjIHmmr/kmOrReaHXsBHiwcQFi4zf3VyNG1ws4HFaY6CO7vpflLx2x9Miygi2yxZWou1j2FTSEhri0z2faQw3vB9a/vQoB2e46IXJ1pvrqGDHXmmL+4d5pLz79/fIKFazGK74NRmIYd3IWcQc1QAWhqDhcwrJ2AId+0+FG9g6Y0nd42aBDQ1bjU2oaP6DfT/gVcYbu/pjkMLbU91CN5XTjUqnwZ/FPmNIusJnEx3EJ+mXf9/8Aw5Yyvw==
+sidebar_class_name: "post api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Assign Endpoint to Resource Group"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/rbac/endpoint"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Assign an endpoint to a specific resource group.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["resourceGroup","endpoint"],"properties":{"resourceGroup":{"type":"string","description":"The name of the resource group."},"endpoint":{"type":"string","description":"The endpoint to assign to the resource group."}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":"Endpoint assigned to resource group successfully or was already assigned."},"400":{"description":"The request was malformed or invalid.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"401":{"description":"The provided authentication credentials were invalid."},"403":{"description":"The authenticated user does not have permission to access the requested resource."},"404":{"description":"The requested resource was not found.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"An internal server error occurred. Look at the server logs for more details."}}}
+>
+  
+</StatusCodes>
+
+
+      

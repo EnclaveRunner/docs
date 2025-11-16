@@ -1,0 +1,71 @@
+---
+id: upload-artifact
+title: "Upload Artifact"
+description: "Upload a new artifact with its metadata and file content."
+sidebar_label: "Upload Artifact"
+hide_title: true
+hide_table_of_contents: true
+api: eJzdVk2T2zYM/SscnLXe3aY9VDcn07Sd6cd2dvfk8QEWYYsJRWpByhuPR/+9A1K25VjZbCeXTH2xJQMPD8ADyD1oChWbNhrvoITH1nrUCpWjZ4UczRqrqJ5NrJWJQTUUUWNEhU6rtbGkKu8iuTiDAiJuApQLmA9uAZYFMD11FOJbr3dQ7tOjYdJQRu6ogMFd/mo6G02LHK/XnpsrCSOvQ1VTk37FXUtQgl99oCpCMcJaQPAdVwQFYBdrz1CAw0aehaTwaNm3xNFQSKDZ/AQaIhu3geKzcjzUpLKt8msVazrWZAb9MdirYLLtJEyi+ioQsZyEyLU/QiAz7i4RcBNU9ApDMBsnv85xCjCRmnBJpe+HQk6QlGZhhBJWxiFPBB2FyJKJXnVJZjPo00daGVrvQm7ODze38nUOcxDV4Epaha6qKIR1Z+1OuI+khG1rTYXiev0hiP9LOjoP9OdB4n6t0J1VZyy49ZODArbEwXj3G4ZaGDBhJD0X0LazNhyG4kJ/4v1VJu8lM/XUoTVrQ/rY/BdYfWEM/u/6lwEwUfQJ7//5SyDHjXkV8uCgagz1JMlTc18aAo2RrqJJq+cySMKQKGIRIjbtZKisnVMY4yJtiKcr0jUrymUVzDMwSUatiJwSRNL/cVNgCL4yknQ+AF69LEbtOIwt5Dn/8ebmcrQljeGYUM8YVINW6klaeVbGbdEa/U0DPp4QYvZ8ORD59eTiO6TyC/Ov5IhNdUxmYk9JMi37rZEVJZonFwem0n4tj2iDeiamU3IJ7c002giEtOoCsdKegnJeGrwl1RI3JiT1ynJPWzE1aygqacWUp3iI9PML+xUtE+qdok8mxPBd1v32C5U6iKjFXbrFGDntvLLIG/oeE/lpahrmTsm8s0OrAvGWWCVs5auqYyY9U394/1FhTD0eTKzfBLX2rBrPpDRFNDbkzRio6tjEHZSLPbzFYKp5F2soF8t+WUBDsfYaSmh9SOcWyn9wfRj063zewgnnXsqUkx6hHROvY2zFOlnJtUBsEhHj1j4ZHurhKiv6nd/9ru5TGpMbjlzkXeuNiylBtFaNPYemh3QlrXzTdG5o7Ox0QEMJ25vZm9ltWq8+xAZTy/PJc7j1HpfVZzT2J+V82wU5VyjSp3jdWjRO2HRsJUKu+wLwxGGo/LKAWnpTLmC/X2GgR7Z9L6+fOmJp67KALbLBlZR1sewLqAk1cer4R9pBCe8yi6sHoSDmthMqU3fuvjg4zauK2jgyv5iaMwXd/X3/AAWshqt+47X4CHDCLU4/M0k8F04WSjF8C/XDEeV2Iw6pBll1j0HGpKG+h2Kg3A2vUhZf87/DEJ4965F/O7yCftn3/b+z+I42
+sidebar_class_name: "post api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Upload Artifact"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/artifact/upload"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Upload a new artifact with its metadata and file content.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"multipart/form-data":{"schema":{"type":"object","required":["source","author","name","file"],"properties":{"source":{"type":"string","description":"The source of the artifact."},"author":{"type":"string","description":"The author of the artifact."},"name":{"type":"string","description":"The name of the artifact."},"tags":{"type":"array","description":"Tags to assign to the artifact.","items":{"type":"string"}},"file":{"type":"string","format":"binary","description":"The artifact file to upload."}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":"Artifact uploaded successfully.","content":{"application/json":{"schema":{"type":"object","description":"Metadata of an artifact.","required":["fqn","versionHash","createdAt","pulls","tags"],"properties":{"fqn":{"type":"object","description":"Fully qualified name of an artifact.","required":["source","author","name"],"properties":{"source":{"type":"string","description":"The source of the artifact."},"author":{"type":"string","description":"The author of the artifact."},"name":{"type":"string","description":"The name of the artifact."}},"title":"FQN"},"versionHash":{"type":"string","description":"The version hash of the artifact."},"createdAt":{"type":"string","format":"date-time","description":"The creation timestamp of the artifact."},"pulls":{"type":"integer","description":"The number of times the artifact has been pulled."},"tags":{"type":"array","description":"Tags associated with the artifact.","items":{"type":"string"}}},"title":"Artifact"}}}},"400":{"description":"The request was malformed or invalid.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"401":{"description":"The provided authentication credentials were invalid."},"403":{"description":"The authenticated user does not have permission to access the requested resource."},"409":{"description":"Artifact already exists.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"An internal server error occurred. Look at the server logs for more details."}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,63 @@
+---
+id: list-all-users
+title: "List All Users"
+description: "Retrieve a list of all users."
+sidebar_label: "List All Users"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVF2P1DoM/SuWn6vZ2Qv3Zd4WCSEkdIVYeBrNQzbxTgNpEuyke0ej/nfktAtddhCIvrRx7eOPc+IzOhLLPhefIu7wAxX2NBIYCF4KpHswIUAVYtlgh8UcBXd7/KQGPHTIJDlFIcHdGf/ZbvX1FPK2Wksi9zXAozM8+NKvUnyHtykWikVBTM7BW6MgV59Fkc4otqfB6Fc5ZcIdGmZzwg59oUFW9nT3mWxBLe9r9UxOa/YOO4xmIOzQecnBnP7T06HDzCkTFz+34d0KSgr7eNSQJ1197Alq9U7LL/otxBuclgR/FK6ez8LXhf0RyhJwCW3qsPgSFED5+rBMHyd9Ony5vX7OlkJmTqN35MDU0lMsCw1gmZweTRB4ICbwcTTBu1b4y+2Ly2grEHKtNHCJBGIq0JuRIBMPXkQzlASmqaW1oeSRaBSTpMqW5kzXv8i0+EM2p5CMAy9QUoJg+Eh/o66LKiLmxM81M5ufMbbm4DXzG4rE3uJMwL+XrstNBB8LcTQBhHgkhoYNydrKTG4D71L6Aqa0GS0uIR0F7hPDkJjAUTE+yCwBIVvZlxPu9md8ZcTbm1p63O0P06HDgUqfHO7wSNppNvoLr9qNvNL7iT8QbnVAc7srnO8t96Vk9W5euMM79Wkl+HifmuPjJKINyvzN+7dw2xq4KG2KhU85+Vhaa7qI1pEL3QImOrBpGGpcKFWyR2KZocbt5sXmWpWTk5TBNLLna4rvdAPdhADzQvupivMPyfx+M85DKPR/ucrB+KgJKwdFmae6x7okaXM9dNgnKWo/n++M0CcO06Tmr5VY6Tp0OBr25k6Htj9MHfZkHHFj8gudVC3WUlaORhNq24g/C/sJyW9ef8QOzVPeZp665a3Yj9s1nlbIrciZdB2WDnCasFsKqYsJp+738e+NyENit4rPiwmnwzRN3wCnVkcu
+sidebar_class_name: "get api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List All Users"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/users/list"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieve a list of all users.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response with a list of users.","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","required":["id","name","displayName"],"properties":{"id":{"type":"string","description":"The uuid of the user."},"name":{"type":"string","description":"The name of the user."},"displayName":{"type":"string","description":"The display name of the user."}},"title":"UserResponse"}}}}},"401":{"description":"The provided authentication credentials were invalid."},"403":{"description":"The authenticated user does not have permission to access the requested resource."},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"An internal server error occurred. Look at the server logs for more details."}}}
+>
+  
+</StatusCodes>
+
+
+      

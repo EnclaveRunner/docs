@@ -1,0 +1,71 @@
+---
+id: check-resource-group-existence
+title: "Check Resource Group Existence"
+description: "Check if a specific resource group exists in the system."
+sidebar_label: "Check Resource Group Existence"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1T2zAQ/SuaPYsECr34FmhKuTF8nDI5KPImFtiSWMkB1+P/3lnZ+SKZcmhzSbJ6Wr339kkt5Bg0GR+Ns5DBTYH6VZilUCJ41GZptCAMriaNYkWu9gI/TIhBGCtigSI0IWI1AglRrQJkM3i4ntzAXALhW40hXru8gaxNfw1hDlmkGiVoZyPayEvK+9JoxRTGL4F5tBB0gZXiX7HxCBm4xQvqCHKv0Qw21G6ZGR/qyXmkaDD0Z+4v73qFSMauQH4S/1SgsKpC4ZZJ26HwEXTpwwyCdzb0Z3w7P+evw04PpywbQSfh6hT8WuVisGsAXRyDnq2qY+HI/MZ8QF0eo346Wpg8RztArr4klzsMwrrYs+y3XZzo/JQcSSSFV03pVC5MENE5USpaIWfgvwwViRwdD7MvHw2RBxJNLLk0JbpFi2Q09JP6fsrtOxuRrCpFQFojidR4lBoF1DWZ2EA2a+FaBaMndSwgm827uYQKY+FyyKBAlYMEr3gNxrRQerwJy1lyFXa9Hll0L2Gv41ZGEWNCJxRksGBMIsOuPewu0fRDVZ5lHuV6a4UEY5cuNd84YnWp1igm93fiMck9mXq0kRrvjI1i6UioshT7O4exB6FsLrSrqtoOo+Whr5FC32p9ProcXTAP70KsVBo636jty7LNXqIuphw5tBo/s2p3UfqnN6n3OOJHHPtSGcvcair5gH56M+DppQQezG8uoXAhMqBtFyrgM5Vdx+W3GokDMpewVmTUgo2ezTuZYoGUsvOKDTPvNZw9MQ2GlzXTOboandzsmGiNPv4Vux/EX9PJD5CwGN7YyuW8h9Q7C1LvkAFIcMnT/kHkWgulsqtarRjb9+S4qcNc9jmUwzdrGhaUbfb4JXP6UD8HvlYVdh3IQU49lJLCr/bfqxDeHeV7+/1Qgm7edd0fX/tPQg==
+sidebar_class_name: "head api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check Resource Group Existence"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"head"}
+  path={"/rbac/resource-group"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Check if a specific resource group exists in the system.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["resourceGroup"],"properties":{"resourceGroup":{"type":"string","description":"The name of the resource group."}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Resource group exists."},"400":{"description":"Bad request."},"401":{"description":"Unauthorized."},"403":{"description":"Forbidden."},"404":{"description":"Resource group does not exist."},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"Internal server error."}}}
+>
+  
+</StatusCodes>
+
+
+      

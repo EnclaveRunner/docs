@@ -1,0 +1,71 @@
+---
+id: assign-roles-to-user
+title: "Assign Roles to User"
+description: "Assign role to a specific user."
+sidebar_label: "Assign Roles to User"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVcFuGzkM/RWB51kn2WYvc3OKoiiwwAZJejJ8oCXaVquRVEqyaxjz7wtKk9its90eeqgv49GQj+R7bzhHMJQ025ht8NDDPCW78YqDI5WDQpUiabu2WpVEPIMOMm4S9At4uJu/hWUHTF8KpXwXzAH6Y721TAb6zIU60MFn8lkeYYzOapRKV5+SlDtC0lsaUP7lQyToIaw+kc7QnQEtQGp/MHIYHEnRyCESZ0tJUqfHJ5CU2foNdN8N97QlVYo1KqxVlv91pHGC/al0jwM9p7+Q1DjL4Ry0/mSKFINPrc8/r2/k8i3qg6A0CDICIgAqFa0ppXVx7qACt1p7TAodE5rDS0bt//b6+hJY2p3EqZkDunXggYzgWb9DZ40I+ksUIubAl8q04wtmhZlss5AO75jfkye2Ghplt6+xJMNEDjtryCgseUs+T50qzWTkFl1Se2I6DVfR3ryOdgZCppFuAiXlQ1Zb3JGKxINNSSqIyFWPpnsjlYxiSqGwpqnS7Q9FOIuvekihdSj+9xTh5j9oe3ZUxIMLaJRNKoegHPKGfsdB/nrt1Zh7ZX0m9uhUIt4Rq4qtgtaFmcxM/R3CZ4W5Cj6FuLBJah1YDYFJGcpoXZrV8ol0YZsP0C+OcIfJ6nnJW+gXy3HZwUB5Gwz0EEOSUSPKM7jiFeorcR6cEB6FoDbuGc7LyNuco0TXKOhhJTG1BWH44bSL333FIbat9rweT3ut7bsX/jqwfh1qlWcavXbyDszvP6jHOv2r25B85kMM1ufKCzqnzjMnrySF3igdhqH4yQ/ilB1xalC769mb2Y30IQQNWJ0im/b0QZItKU5TH9NlL8eT637mA9aYzPQ1X0WH1kvhwk5wmjILEGWgq8yJDbeiW7+A43GFiT6yG0c5/lKIRfJlBztkiyvhbrEcO9gSGuLqhs90gB7etgb/eJLiEu6KNHHxiozdc8Zca4r5h7Hn1rr/5/EJOlhNn+EhGMlh3IvcuIceoINQCavmqmdHcOg3BTcS2zDFSvit55rHuukqM00P0B/O+qvkNMOKSKLfOEI3jVOmozrh/+XfY0r7wOYsP05HMC7HcfwX6+UF2A==
+sidebar_class_name: "post api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Assign Roles to User"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/rbac/user"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Assign role to a specific user.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["userId","role"],"properties":{"userId":{"type":"string","description":"The uuid of the user."},"role":{"type":"string","description":"The name of the role to assign to the user."}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":"Role assigned to user successfully or role was already assigned."},"400":{"description":"The request was malformed or invalid.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"401":{"description":"The provided authentication credentials were invalid."},"403":{"description":"The authenticated user does not have permission to access the requested resource."},"404":{"description":"The requested resource was not found.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"An internal server error occurred. Look at the server logs for more details."}}}
+>
+  
+</StatusCodes>
+
+
+      
