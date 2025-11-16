@@ -23,6 +23,14 @@ jobs:
 
       - name: Update API docs
         run: npm run openAPI
+      
+      - name: Commit API docs changes
+        run: |
+          git config --local user.name "Enclave Bot"
+          git config --local user.email "enclave-automation@marvin-fuchs.de"
+          git add docs/api/
+          git diff --cached --quiet || git commit -m "Update API docs"
+          git push
 
       - name: Build project
         run: npm run build
