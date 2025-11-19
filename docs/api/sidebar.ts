@@ -199,6 +199,10 @@ const sidebar: SidebarsConfig = {
     {
       type: "category",
       label: "Artifacts",
+      link: {
+        type: "doc",
+        id: "api/artifacts",
+      },
       collapsible: true,
       items: [
         {
