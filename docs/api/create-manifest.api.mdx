@@ -1,0 +1,71 @@
+---
+id: create-manifest
+title: "Create Manifest"
+description: "Create a new manifest from YAML manifest data."
+sidebar_label: "Create Manifest"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVMGO20YM/RWCZ9W7adpDdXOKICiQRRfYzaEwfKBn6NUk0oxCjuwIhv694Fi78iZGC/TUkyEO+fge+cwTelYnoc8hRazxd2HKDASRj9BRDHvWDHtJHfy1vvu4hDxlWmGFmZ4U6w3ezQ+K2wqFvw6s+V3yI9an8hmEPdZZBq7QpZg5ZnvK/C3fjNS1WJ+mabJS7VNUVnv9+faN/bym+NwJXOHqQQfnWHU/tO1olP4J/pfb2x8RHxuGmTIcSaGjdp+kYw9JIMQDtcF/B0x93wZHBnDzWQ3lhOoa7qi0HXvGGtPuM7uM1cUANsgiSWxIvaSeJYez1HN4qdUsIT6hcc4htxZ6L/KBI0twOM1irozHxPSSDsGzBxpywzHPTG1i3j6pVTiy8CKuoL29jnYBwh4GZQGfWCGmDA0dGHqWLqhah5yAyjYgL0NlD8KaBnE8d/rtx07rxVvHkJtS/xQOHCFSx0CtMPkR+FvQrP/Hbfx6zVrrCCFmlkgtKMuBBQo2JOcGEfYr+JjSF6BcBM8pbXpS2CeBLgmD50yh1VVpr+wGCXnEenPCd6TBrYfcYL3ZTtsKO85N8lhjn9Sk9mRvePM8WlwAHmw+Z7UXMC+Km5x7yy5ZWOPOcgqDEPepJD4PIrrWXLC+/wMeCn+srriIY5axTyHmoozaFi4rZ6soUPTgUtcNcd6o7frAomeow+3q7eqNucgkdlR2bQ5ZjtfdIvYVjdNimf9w585jKQelbylEozCIHZZ5yht8mfK2wsYWUG/wdNqR8idpp8nCXwcW2922wgNJoJ2NcLOdKmyYPEtZ6xcejeKZ7E+P1tnS2+GFQTlpU/WcunaO+3w96dIV938+PGKFu/kud8lbstDR/hV0xBpNFb12wnnz1fxr/OYHiuNFyyL0bKNPaobveJqwmhkOc6iQ/rf6e1I9JvEX9f0cwmk7TdPfvq1T1g==
+sidebar_class_name: "post api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create Manifest"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/manifest"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new manifest from YAML manifest data.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"text/yaml":{}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":"Manifest created successfully.","content":{"text/yaml":{}}},"400":{"description":"The request was malformed or invalid.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"401":{"description":"The provided authentication credentials were invalid."},"403":{"description":"The authenticated user does not have permission to access the requested resource."},"409":{"description":"A manifest with the given name already exists.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"An internal server error occurred. Look at the server logs for more details."}}}
+>
+  
+</StatusCodes>
+
+
+      

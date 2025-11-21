@@ -255,6 +255,23 @@ const sidebar: SidebarsConfig = {
         },
       ],
     },
+    {
+      type: "category",
+      label: "Manifests",
+      link: {
+        type: "doc",
+        id: "api/manifests",
+      },
+      collapsible: true,
+      items: [
+        {
+          type: "doc",
+          id: "api/create-manifest",
+          label: "Create Manifest",
+          className: "api-method post",
+        },
+      ],
+    },
   ],
 };
 
