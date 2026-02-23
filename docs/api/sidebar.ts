@@ -63,12 +63,6 @@ const sidebar: SidebarsConfig = {
           label: "Update Current User Information",
           className: "api-method patch",
         },
-        {
-          type: "doc",
-          id: "api/delete-current-user",
-          label: "Delete Current User",
-          className: "api-method delete",
-        },
       ],
     },
     {
@@ -193,82 +187,6 @@ const sidebar: SidebarsConfig = {
           id: "api/delete-rbac-policy",
           label: "Delete RBAC Policy",
           className: "api-method delete",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "Artifacts",
-      link: {
-        type: "doc",
-        id: "api/artifacts",
-      },
-      collapsible: true,
-      items: [
-        {
-          type: "doc",
-          id: "api/check-artifact-existence",
-          label: "Check Artifact Existence",
-          className: "api-method head",
-        },
-        {
-          type: "doc",
-          id: "api/retrieve-artifact-metadata",
-          label: "Retrieve Artifact Metadata",
-          className: "api-method get",
-        },
-        {
-          type: "doc",
-          id: "api/delete-artifact",
-          label: "Delete Artifact",
-          className: "api-method delete",
-        },
-        {
-          type: "doc",
-          id: "api/tag-artifact-version",
-          label: "Tag Artifact Version",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "api/remove-tag-from-artifact",
-          label: "Remove Tag from Artifact",
-          className: "api-method delete",
-        },
-        {
-          type: "doc",
-          id: "api/download-artifact",
-          label: "Download Artifact",
-          className: "api-method get",
-        },
-        {
-          type: "doc",
-          id: "api/upload-artifact",
-          label: "Upload Artifact",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "api/query-artifact-metadata",
-          label: "Query Artifact Metadata",
-          className: "api-method get",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "Manifests",
-      link: {
-        type: "doc",
-        id: "api/manifests",
-      },
-      collapsible: true,
-      items: [
-        {
-          type: "doc",
-          id: "api/create-manifest",
-          label: "Create Manifest",
-          className: "api-method post",
         },
       ],
     },

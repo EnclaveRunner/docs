@@ -16,10 +16,15 @@
     "typecheck": "tsc"
   },
   "overrides": {
-    "@easyops-cn/docusaurus-search-local": {
-      "cheerio": "1.1.2"
+    "webpack-dev-server": "5.2.1",
+    "@reduxjs/toolkit": {
+      "react": "$react",
+      "react-dom": "$react-dom"
     },
-    "webpack-dev-server": "5.2.1"
+    "react-redux": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
   },
   "dependencies": {
     "@docusaurus/core": "3.8.1",
