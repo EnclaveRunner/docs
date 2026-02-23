@@ -24,6 +24,9 @@
     "react-redux": {
       "react": "$react",
       "react-dom": "$react-dom"
+    },
+    "@easyops-cn/docusaurus-search-local": {
+      "cheerio": "1.0.0-rc.12"
     }
   },
   "dependencies": {
