@@ -1,0 +1,50 @@
+/* Styles for the GHWiki component with Mermaid support */
+
+.mermaid-container {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+  text-align: center;
+}
+
+.mermaid {
+  /* Ensure the diagram is visible */
+  min-height: 200px;
+  overflow: visible;
+}
+
+/* Override mermaid styles for better integration */
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Dark theme support for mermaid diagrams */
+[data-theme="dark"] .mermaid-container {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+/* Loading and error states */
+.gh-wiki-loading {
+  padding: 2rem;
+  text-align: center;
+  color: var(--ifm-color-secondary);
+}
+
+.gh-wiki-error {
+  padding: 1rem;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 0.375rem;
+  color: #721c24;
+  margin: 1rem 0;
+}
+
+[data-theme="dark"] .gh-wiki-error {
+  background-color: #3d1a1a;
+  border-color: #6b2c2c;
+  color: #f8d7da;
+}
