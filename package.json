@@ -27,7 +27,7 @@
     },
     "@easyops-cn/docusaurus-search-local": {
       "cheerio": "1.0.0-rc.12",
-      "undici": "6.20.1"
+      "undici": "6.23.0"
     }
   },
   "dependencies": {
