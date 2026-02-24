@@ -23,29 +23,32 @@ const config: Config = {
   onBrokenMarkdownLinks: "warn",
 
   plugins: [
-    [
-      "docusaurus-plugin-openapi-docs",
-      {
-        id: "api", // plugin id
-        docsPluginId: "classic", // configured for preset-classic
-        config: {
-          enclave: {
-            specPath: "openAPI",
-            outputDir: "docs/api",
-            sidebarOptions: {
-              groupPathsBy: "tag",
-              categoryLinkSource: "tag",
-              sidebarCollapsible: true,
-            },
-          } satisfies OpenApiPlugin.Options,
-        },
-      },
-    ],
+    // Temporarily disabled to isolate issue
+    // [
+    //   "docusaurus-plugin-openapi-docs",
+    //   {
+    //     id: "api", // plugin id
+    //     docsPluginId: "classic", // configured for preset-classic
+    //     config: {
+    //       enclave: {
+    //         specPath: "openAPI",
+    //         outputDir: "docs/api",
+    //         sidebarOptions: {
+    //           groupPathsBy: "tag",
+    //           categoryLinkSource: "tag",
+    //           sidebarCollapsible: true,
+    //         },
+    //       } satisfies OpenApiPlugin.Options,
+    //     },
+    //   },
+    // ],
   ],
 
   // Internationalization and metadata settings
   themes: [
-    "docusaurus-theme-openapi-docs",
+    // Temporarily disabled to isolate issue
+    // "docusaurus-theme-openapi-docs",
+    // Re-enable search plugin since main issues are resolved
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
       /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
@@ -62,7 +65,8 @@ const config: Config = {
         docs: {
           sidebarPath: "./sidebars.ts",
           editUrl: "https://github.com/EnclaveRunner/docs/blob/main",
-          docItemComponent: "@theme/ApiItem",
+          // Temporarily disable custom component to isolate issue
+          // docItemComponent: "@theme/ApiItem",
         },
         blog: false,
         theme: {

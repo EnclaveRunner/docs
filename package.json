@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "openAPI": "node --require ./scripts/polyfill.js -e \"\" && rm -rf ./docs/api && npm run docusaurus gen-api-docs all",
+    "openAPI": "rm -rf ./docs/api && npm run docusaurus gen-api-docs all",
     "start": "docusaurus start",
-    "build": "node --require ./scripts/polyfill.js -e \"\" && docusaurus build && cp ./google5239173c14d537e9.html ./build/",
+    "build": "docusaurus build && cp ./google5239173c14d537e9.html ./build/",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -26,8 +26,7 @@
       "react-dom": "$react-dom"
     },
     "@easyops-cn/docusaurus-search-local": {
-      "cheerio": "1.0.0-rc.12",
-      "undici": "6.20.1"
+      "cheerio": "1.0.0-rc.12"
     }
   },
   "dependencies": {
