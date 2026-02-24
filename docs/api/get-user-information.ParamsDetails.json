@@ -1,0 +1,1 @@
+{"parameters":[{"name":"userId","in":"query","required":false,"schema":{"type":"string"},"description":"The uuid of the user to retrieve."},{"name":"name","in":"query","required":false,"schema":{"type":"string"},"description":"The name of the user to retrieve."}]}

@@ -18,6 +18,7 @@ import StatusCodes from "@theme/StatusCodes";
 import OperationTabs from "@theme/OperationTabs";
 import TabItem from "@theme/TabItem";
 import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
 
 <Heading
   as={"h1"}
@@ -42,8 +43,8 @@ Delete an existing role-based access control (RBAC) policy, if it existed.
   id={"request"}
   as={"h2"}
   className={"openapi-tabs__heading"}
-  children={"Request"}
 >
+  <Translate id="theme.openapi.request.title">Request</Translate>
 </Heading>
 
 <ParamsDetails
@@ -53,16 +54,13 @@ Delete an existing role-based access control (RBAC) policy, if it existed.
 </ParamsDetails>
 
 <RequestSchema
-  title={"Body"}
-  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["role","resourceGroup","permission"],"properties":{"role":{"type":"string","description":"The name of the role. (or \"*\" for all roles)"},"resourceGroup":{"type":"string","description":"The name of the resource group. (or \"*\" for all resource groups)"},"permission":{"type":"string","enum":["GET","POST","PATCH","DELETE","HEAD","*"],"description":"The allowed permission (e.g., \"GET\", \"POST\", \"*\")."}},"title":"RBACPolicy"}}}}}
+  {...require("./delete-rbac-policy.RequestSchema.json")}
 >
   
 </RequestSchema>
 
 <StatusCodes
-  id={undefined}
-  label={undefined}
-  responses={{"200":{"description":"RBAC policy deleted successfully."},"400":{"description":"The request was malformed or invalid.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"401":{"description":"The provided authentication credentials were invalid."},"403":{"description":"The authenticated user does not have permission to access the requested resource."},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"An internal server error occurred. Look at the server logs for more details."}}}
+  {...require("./delete-rbac-policy.StatusCodes.json")}
 >
   
 </StatusCodes>

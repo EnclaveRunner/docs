@@ -18,6 +18,7 @@ import StatusCodes from "@theme/StatusCodes";
 import OperationTabs from "@theme/OperationTabs";
 import TabItem from "@theme/TabItem";
 import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
 
 <Heading
   as={"h1"}
@@ -42,8 +43,8 @@ Remove a tag from an artifact.
   id={"request"}
   as={"h2"}
   className={"openapi-tabs__heading"}
-  children={"Request"}
 >
+  <Translate id="theme.openapi.request.title">Request</Translate>
 </Heading>
 
 <ParamsDetails
@@ -53,16 +54,13 @@ Remove a tag from an artifact.
 </ParamsDetails>
 
 <RequestSchema
-  title={"Body"}
-  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["fqn","versionHash","tag"],"properties":{"fqn":{"type":"object","description":"Fully qualified name of an artifact.","required":["source","author","name"],"properties":{"source":{"type":"string","description":"The source of the artifact."},"author":{"type":"string","description":"The author of the artifact."},"name":{"type":"string","description":"The name of the artifact."}},"title":"FQN"},"versionHash":{"type":"string","description":"The version hash of the artifact to untag."},"tag":{"type":"string","description":"The tag to remove from the artifact."}}}}}}}
+  {...require("./remove-tag-from-artifact.RequestSchema.json")}
 >
   
 </RequestSchema>
 
 <StatusCodes
-  id={undefined}
-  label={undefined}
-  responses={{"200":{"description":"Tag removed from artifact successfully."},"400":{"description":"The request was malformed or invalid.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"401":{"description":"The provided authentication credentials were invalid."},"403":{"description":"The authenticated user does not have permission to access the requested resource."},"404":{"description":"The requested resource was not found.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"413":{"description":"The request payload is too large.","content":{"application/json":{"schema":{"type":"object","required":["error"],"properties":{"error":{"type":"string"}},"title":"ErrGeneric"}}}},"500":{"description":"An internal server error occurred. Look at the server logs for more details."}}}
+  {...require("./remove-tag-from-artifact.StatusCodes.json")}
 >
   
 </StatusCodes>
