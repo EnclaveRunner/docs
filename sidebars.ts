@@ -1,6 +1,5 @@
 import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
-// API sidebar temporarily removed
-// import apiSidebar from "./docs/api/sidebar";
+import apiSidebar from "./docs/api/sidebar";
 
 /**
  * Creating a sidebar enables you to:
@@ -18,12 +17,11 @@ const sidebars: SidebarsConfig = {
     "intro",
     "first-steps",
     "api-server",
-    // API Documentation section temporarily disabled
-    // {
-    //   type: "category",
-    //   label: "API Documentation",
-    //   items: apiSidebar,
-    // },
+    {
+      type: "category",
+      label: "API Documentation",
+      items: apiSidebar,
+    },
     "Wiki",
     "Architecture",
   ],
