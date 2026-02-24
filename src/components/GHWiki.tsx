@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
 
 export function GHWiki({ wikiUrl }: { wikiUrl: string }) {
   const [loading, setLoading] = useState(true);
@@ -29,7 +30,9 @@ export function GHWiki({ wikiUrl }: { wikiUrl: string }) {
 
   return (
     <>
-      <Markdown rehypePlugins={[rehypeRaw]}>{wikiContent}</Markdown>
+      <Markdown remarkPlugins={[remarkGfm]}  rehypePlugins={[rehypeRaw]}>
+        {wikiContent}
+      </Markdown>
     </>
   );
 }
