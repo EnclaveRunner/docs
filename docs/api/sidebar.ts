@@ -284,7 +284,7 @@ const sidebar: SidebarsConfig = {
         {
           type: "doc",
           id: "api/get-task-list",
-          label: "Get Task List",
+          label: "Get Task list",
           className: "api-method get",
         },
         {
