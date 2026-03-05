@@ -16,7 +16,7 @@
     "typecheck": "tsc"
   },
   "overrides": {
-    "webpack-dev-server": "5.2.1",
+    "webpack-dev-server": "5.2.3",
     "@reduxjs/toolkit": {
       "react": "$react",
       "react-dom": "$react-dom"
