@@ -15,7 +15,19 @@ const sidebars: SidebarsConfig = {
   // Manual sidebar with API docs integrated
   tutorialSidebar: [
     "intro",
-    "first-steps",
+    {
+      type: "category",
+      label: "First Steps",
+      link: {
+        type: "generated-index",
+        title: "First Steps",
+        slug: "/first-steps"
+      },
+      items: [
+        "first-steps/docker",
+        "first-steps/kubernetes",
+      ],
+    },
     "api-server",
     {
       type: "category",

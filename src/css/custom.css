@@ -98,6 +98,18 @@
   --glass-bg: rgba(254, 253, 251, 0.85);
   --glass-border: rgba(125, 143, 63, 0.15);
   --glass-backdrop: blur(12px) saturate(1.8);
+
+  --cli-download-bg: #f0f2f5;
+  --cli-download-border: #d9d9d9;
+  --cli-tabs-border: #e0e0e0;
+  --cli-tab-color: #555;
+  --cli-tab-hover-bg: #e9e9e9;
+  --cli-tab-active-color: var(--ifm-color-primary);
+  --cli-code-bg: #f8f8f8;
+  --cli-code-color: #333;
+  --cli-copy-button-bg: #e0e0e0;
+  --cli-copy-button-color: #333;
+  --cli-copy-button-hover-bg: #d0d0d0;
 }
 
 [data-theme="dark"] {
@@ -121,9 +133,21 @@
   --ifm-navbar-background-color: rgba(15, 20, 25, 0.95);
   --ifm-footer-background-color: linear-gradient(
     135deg,
-    #1a1f24 0%,
-    #252a30 100%
+    #2c3e50 0%,
+    #1a252f 100%
   );
+
+  --cli-download-bg: #2e2e2e;
+  --cli-download-border: #444;
+  --cli-tabs-border: #444;
+  --cli-tab-color: #ccc;
+  --cli-tab-hover-bg: #3a3a3a;
+  --cli-tab-active-color: var(--ifm-color-primary);
+  --cli-code-bg: #212121;
+  --cli-code-color: #e0e0e0;
+  --cli-copy-button-bg: #444;
+  --cli-copy-button-color: #ccc;
+  --cli-copy-button-hover-bg: #555;
 
   /* Dark Gradient System */
   --primary-gradient: linear-gradient(

@@ -1,0 +1,53 @@
+---
+sidebar_position: 1
+---
+
+# Docker
+import CliDownloadTabs from '@site/src/components/CLIDownloadTabs';
+
+# First Steps
+This sections guides you through the process of installing all tools and deploying your own instance of Enclave.
+
+> **Note:** Enclave is currently in developer preview. It's perfect for experimentation and evaluation, but not yet recommended for production use cases.
+
+## Encl CLI Installation
+You want to control your Enclave instance directly from the terminal?
+One way to interact with Enclave is through our command-line interface (CLI). The CLI allows you to manage your Enclave instance, deploy blueprints, and monitor their status.
+> **Note:** The CLI is an early preview in order to fully manage your instance, you will need to use the Enclave Console (Web UI) or the REST API for now.
+<CliDownloadTabs />
+
+## Docker-Compose Installation
+The easiest way to get started with Enclave is to use our `docker-compose` setup. This will allow you to quickly deploy an instance of Enclave on your local machine.
+1. Clone the repository:
+```bash
+git clone https://github.com/EnclaveRunner/landscape.git
+````
+2. Navigate to the `docker-compose` directory:
+```bash
+cd docker-compose
+```
+3. Start the Enclave instance:
+```bash
+docker-compose up -d
+```
+4. Access the Enclave Console (Web UI) at `http://localhost:8091` and log in with the default credentials (username: `enclave`, password: `enclave`).
+
+## Monitoring
+By default Enclave is configured to use and spin up its own monitoring stack which includes:
+- **Prometheus** for metrics collection
+- **Grafana** for metrics visualization
+- **Cadvisor** for container monitoring
+- **Loki** for log aggregation
+- **Alloy** for distributed tracing
+- **PGAdmin** for graphical database management
+
+If you just want to use Enclave without the monitoring stack, you can simply comment out the
+monitoring compose in the `docker-compose.yml` file like this:
+```yaml
+include:
+  - docker-compose.enclave.yaml
+# - docker-compose.monitoring.yaml
+
+networks:
+  internal:
+```
