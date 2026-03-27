@@ -1,0 +1,1 @@
+{"title":"Body","body":{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["endpoints"],"properties":{"endpoints":{"type":"array","description":"Endpoints assigned to this resource group.","items":{"type":"string"}}},"title":"PutResourceGroupRequest"}}}}}

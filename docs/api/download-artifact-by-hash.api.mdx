@@ -1,0 +1,69 @@
+---
+id: download-artifact-by-hash
+title: "Download Artifact by Hash"
+description: "Download raw artifact content for a version referenced by hash."
+sidebar_label: "Download Artifact by Hash"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVsGO20YM/RWCpxZQ7XWzvei2RYO0QA9Bk/Sy8IEe0dYk0ozCoewahv694Ej22om9BZIUyMUjjYbkIx/n0QesODnxnfoYsMTf4i40kSoQ2gGJ+jU5BReDclBYRwGCLUvyMYDwmoWD4wpWe6gp1TMsUGmTsHzEh8k44bLAjoRaVhb7dMBALWOZl9SRYyzQW/SOtMYChT/2XrjCUqXnApOruSUsD6j7zgyTig8bHIpP0B9jwsnzDIfiIt7/EuoiihXiW0X5eyq1+YS4Bq35xMoMh6W5Tl0MiZN5+/nuzpYbSCcWjaTp0Q5T1zXekR2eR6esPyUVpta+3cJZ4DpKS4olrnwg2eMwDEOB99fiv60ZrACcFHaUoKXGrLmCKODDlhpfPYPpfTIvV7DE1Xt2elHdR2SRKLnjJHYs6sfCjNuf13soUL02tvVS5BUHFu9OySyuJ9NJ3PqKK6Beaw46IQUnXNkrNQl2LPyUXPb24rq3MydcQZ9YoIqcIESFmrYMHUvrU24DjUDOcUq5EaaicgXCKfYydjve390/S8LZ+cyHBVrHPnyfJCxulO3YUR3ts175BBojNCQb/h4T+eXq1Qzgg7IEaiCxbFkg+4boXC/C1Qz+jPEDkGbCpyNN3KQsxW0UhoqVfJNmOXxi14vXfVbZXyl599BrjeXj0rSiZa1jhSVu2DLN4lTifLuYHzVlLrSbH07qOYzPw9z0Z36w3wGforyxIo4lOYt1Kkut2uEkdva+sjMZpg/rmA8eqxVcY63+8PoPeJOTxE+V0DjnoLLvoj9OoqaBc8upJRJQqMDFtu3DRLs1xDS1sMTt3ezFbGFXpYtJW8oNMYn3af6dVHO1h99HRb8AdHjqsG8xNMeKKf+j864hHwxdL43FGWl6xO0CCzx6t0alHRZYng/Rcppw0wgq87ossI5JzcXhsKLE76QZBtv+2LNYqywL3JJ4WhkZjwesfLLnCss1NYmfyfyHv6bb8iNcm703Eps2KeyNF2p6e8MCP/D+4l+BDdWvx/IVML4cwfOD+4sAZTKH5VBgzVSxZKrGTw/OcadnRjeH+oUMvHr51lrq8taOt7SYVotxFVZupfHKv0umYC0PwwlrP23lAv6X/WtKaRelOrPvpi3Ldxj+BbN+rWU=
+sidebar_class_name: "get api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Download Artifact by Hash"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/v1/artifact/raw/{namespace}/{name}/hash/{hash}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Download raw artifact content for a version referenced by hash.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./download-artifact-by-hash.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./download-artifact-by-hash.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./download-artifact-by-hash.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

@@ -5,7 +5,7 @@ description: "Retrieve a list of all resource groups in the system."
 sidebar_label: "List All Resource Groups"
 hide_title: true
 hide_table_of_contents: true
-api: eJydVE1v2zAM/SsEz17a7uOSWzYMxYAdhnY7BTkoMhtrkyWVpN0Fgf/7QDnZ0i3DgPkim6YeyfeedMCWxHMoGnLCJd6RcqCRwEEMopAfwMUITJIH9gQ7zkMRCAm0I5C9KPULbFDdTnC5xru3q3e4aZBJSk5CgssDvry+tuV5pfvBexJ5GCp6TYanoN1Z5d+qWh2fk1JSg3OlxOCdwV19FcM8oPiOemdvui+ES3TMbo8NBqVezuKiHNIOJ3safH1982eDnzuCwnkMLbXgBu0o6bEeeKbWPl0UeCImCGl0MbQLrGivLqOdgVALgxBDm0kgZYXOjQSFuA8iVkEzuEpQJZrpcSCxXSdO5ko3f6l0zIfi9jG7FoKA5gzR8Y7+h8a8/Upe0XR9HAJTa1oTc2YTu3AuxBpmtefwBaob1KDRQu+ZbykRB4+zAG8uOWSVICQlTi6CEI/EULEhez8wU7uAjzl/A6ezGeeUmHcCD5mhz0zQkroQZVHLC/mBg+5xuT7gWyfBrwbtcLneTJsGe9Iut7jEHdmkxdkvvOKt81fmyBcn6l/MdsRfgPfG1zz9GexPBjrVYtk1C5e4tZzaUUgPuSaeiEk+mhFWnz7AfZ0HmwvyUlLelxyS1knthJ7vPKov4FILPvf9kI4Km/YjscxQ4/Xi1eLGjFSyaO+q9snVHj/aGVzFCHenQ3h7mvpZP4dfXvr/y2OmSem7XpXoQrKWBo6GPsuwRpMBG7woxKbBLota2uGwdUJfOE6ThR8HYpN70+DoOLitsbzeTA125Fri6oRvtDe3eU/FhB9dHOrV8fvBeGaS2/efsUH3XOhZ2Oa4GvbpGkr7M+Ta5OySL2L+7mmasDk2MhxDODX/3v/JiTxlbs/2l2MIp800TT8AOtYMfA==
+api: eJytVU2P20YM/SsEz4rXbtKLb06xXQRI0SCbnBY+jEe0NcloRiFH2hiG/nvBkb2WP3abLnoyNCYfH/n4scOSxLJrkosB5/iZEjvqCAx4JwniGoz3wCSxZUuw4dg2Ai5AqghkK4nqCRaYzEZw/oCf3y/+wGWBjWFTUyLW1x0GUxPO0bvaJSzQaagfLfEWC2T60TqmEudr44UKFFtRbXC+w7Rt1M2FRBtiLLB2wdVtjfNZX5wx/8v81L8gtPWKWIk30TvrSCBFYEothwn2xROZuF4L/T9sphds/s7g4EKKuVKZyzbX9IQER0//nYIkdmGDF1H/dD4RHxNfbUEDTLBfKqw0MQiJAv02nerPqft9ay2JrNsseDaGR5eqUTOcNYJKb2NIFJLCmabxzhqFu/kmirm7JG+YjabpEtUyeo+rb2TTSf4PQ5kKpFA20YUkubc4NsTJDZkMhTwvzXllvlR0xh3UUbUYgV+SPEW5PViCEXGbQCVkfZ2cgU+u5HcQre8LTC55yuM2eN2p0+FDTdTo3XR2qZEm0nDsXEklmDZVFNK+5GCZSv00XuCRmMCFznhX5izfTd9eRxuBUAmtEEMZSSDEBJXpCBri2olohBTB5B7JTa1CkajXIfsh0uyZSHt7aMzWR1OC09GM4A1v6DWddLVjiDnyZZsMz1fUOIpxy3xHgdhZHAT4/dqQLIJONXEwHoS4I4aMDdHalpnKCXyM8TuYNKzIwcTHjcA6MtSRCUpKxnmZ5PBCtmWXtnlRvjfi7KJNFc4fljq1NaUqljjHTd5VjdG/8Kab3fDK2JtD4d/ktsMj2r0Wa0h9hPmUfpVSts5WOMeV2mQ6LqxjNjxUJVivXbD49AHuczJXh4tC4m0ejpymHo2x5156ARNKsLGu27CXV4XviGWA6qaTt5OZdlETJdUmHEccP+oOWngPh0GBPDZyzmd3bKTX37OhTIl+ppvGGxeUUste0QcNHrCbaeutjM0deKLDssAqSlKr3W5lhL6y73t9Hpa8Sl06MSs/WvPPJvFrp+0Z0t9pO7q8nfGt2uQb9OsMXjxnLwZ+urKvjPzsSXsx6v6sHmMu9YOdBs2TVWBFpiTOSgw+C2upGTO92EEn83h3+wULNKdjNYxRsf9V7MM9CdsRcu6JYSa/iq6SmvoeD+Tb/VOu1L/5fzIij5HLkX+zf8J+2ff9P1mebYY=
 sidebar_class_name: "get api-method"
 info_path: docs/api/enclave-api-server
 custom_edit_url: null
@@ -29,7 +29,7 @@ import Translate from "@docusaurus/Translate";
 
 <MethodEndpoint
   method={"get"}
-  path={"/rbac/list-resource-groups"}
+  path={"/v1/rbac/resource-group"}
   context={"endpoint"}
 >
   
@@ -39,8 +39,16 @@ import Translate from "@docusaurus/Translate";
 
 Retrieve a list of all resource groups in the system.
 
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
 <ParamsDetails
-  parameters={undefined}
+  {...require("./list-all-resource-groups.ParamsDetails.json")}
 >
   
 </ParamsDetails>

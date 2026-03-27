@@ -1,0 +1,69 @@
+---
+id: patch-artifact-metadata-by-hash
+title: "Patch Artifact Metadata by Hash"
+description: "Patch artifact metadata for the referenced version. Only tags can be patched; provided fields are merged."
+sidebar_label: "Patch Artifact Metadata by Hash"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNV0uP2zYQ/isDnlpAsXeb9KKeNougKdDHItm0h4UPY3JsMaFIZUh5Yxj678VQkt+7myZtkYsl8THzzTdPb5ShqNk2yQavSnWDSVeAnOwCdYKaEhpMCIvAkCoCpgUxeU0GVsTRBj+BP7xbQ8JlBI0e5gSNCCHzEzQcVtaQgYUlZyIgE9TESzITVSi5oso7dTVoi2pWqAYZa0rEsrVRHmtSZX7EBjWpQlnB2WCqVKGYPraWyagycUuFirqiGlW5UWndyMWY2Pql6oojO0edsJU8UV1xoO8/UXWgpcJY/Vta/uy9ASITwiI7a3TjRHWzXjTF9DKYtcg71qSDT+STbGHTOKtRJE/fRxG/OQUS5u9JJ1WohkNDnCzFvJuduj2FzLhWx2BvJVhSAIzRLr287cPdRdZfFXmIlApgahxqivkgfbIxWb/MQSeRZBPV8QxJXVeoZJOjMbJHX8hWJ5TEJvjYI//h4kIeDzhvmwltYzCRgdhqTTEuWufWguGL+TtU+NuoJywA/SknBzFyd5AYQ9AOJ1/3waWZBO5V9lTrXBwTb3bsuZ2oEyKPQf4+Hj0TaQOOz5Jx9vo+/ielPBH2+/afkbUIXGNSpRKXPks283eo4FruiwbZjQnr5qyantqdCusTLYlPrW7rOXEWIfIO477CCHMiDyJNamRX/IN8whiDtjk2722qjjB+XpIc5ceLcylxm9tAriVwjxFqdMIjGQgM1q/QWfNVCbEf38Qc+DRW++UztuxMecX8M3liq7fGXJ43ZtulsE0V+TQgBc1k5BNdhHti2hmXpT0/L21PCBloIzGYQBF8EAevCBri2sYctVICcxUZemsmlQwwxdBy35PUi4sXjzph73z2hyhahNZ/m064fIC2MaIaXLuABqw0iAAOeUnfoiE/nu0WHiTx2aODSLwihiwbgtYtM5kJ/BrCB8CUHT4ccWEZ84BVByYwlNC6OMnqI+mWbVrnWeglRquv2lSp8m4mHb2mVAXTDw9ain0eIko1XV1Ox8yfbrZ1vevfu6kUy+lGfju10/FWKOwJ2dO0JaVKqVHDQCLfczmTQYoP3uyGi1efsG4c7YaBu5HQWSfDziLkrZFYr51kxdXNL/A283Fa3aTl+8TrJlifMlPoHOzfHKInAnoDOtR164cImew6oirV6mLyfHKZC3aIqUY/Nr7t6Ltt+NtGPF/D0EsPYG12Ifn/Ts29OxJ9StPGofViTctOEPX+v1OrS1WoEY4qVLk/JpTDnDBMn2V+zgpVhZjk8mYzx0jv2HWdLH9siSX+ZoVaIVuci9vuNsrYKO9GlQt0kR5h57s3Qwp+D+fG7gdMGhuel3a3QtfKlyrUB1of/CGQefrrsXwFjC9H8Pjw8kWAsjM7SbSK0BBnV/Vb1z2EZ7ciYHf1pJqKOf2NK62pSY+e3a9CN1e3169VoebDP4w6GLnEeC9lGO97nCFzkstMXtsoh37Z4lLO9kKlqOBh9emrTTE8xaizPOTY7UvXuyh1uKau25LTDkvZxKfu32CM94HN3v1mWBKCu+5vL9xHtw==
+sidebar_class_name: "patch api-method"
+info_path: docs/api/enclave-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Patch Artifact Metadata by Hash"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/v1/artifact/{namespace}/{name}/hash/{hash}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Patch artifact metadata for the referenced version. Only tags can be patched; provided fields are merged.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./patch-artifact-metadata-by-hash.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./patch-artifact-metadata-by-hash.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./patch-artifact-metadata-by-hash.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

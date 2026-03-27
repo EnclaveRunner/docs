@@ -1,0 +1,1 @@
+{"title":"Body","body":{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"password":{"type":"string","description":"The password for the user."},"displayName":{"type":"string","description":"The display name for the user."},"roles":{"type":"array","description":"Roles assigned to the user.","items":{"type":"string"}}},"title":"PatchUser"}}}}}

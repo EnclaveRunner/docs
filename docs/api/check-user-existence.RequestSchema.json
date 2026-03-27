@@ -1,1 +1,1 @@
-{"title":"Body","body":{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["id"],"properties":{"id":{"type":"string","description":"The uuid of the user to retrieve."}},"title":"UserRequest"}}}}}
+{"title":"Body"}

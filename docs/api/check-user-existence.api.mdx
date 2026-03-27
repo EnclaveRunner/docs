@@ -1,11 +1,11 @@
 ---
 id: check-user-existence
 title: "Check User Existence"
-description: "Check if a specific user exists."
+description: "Check if a specific user exists by username."
 sidebar_label: "Check User Existence"
 hide_title: true
 hide_table_of_contents: true
-api: eJytVMtSGzEQ/BXVnBUDgVz2BomTcKN4nFw+yNLYK1hLYqQ1OC79e2qkDSzYeRxysdajnkdP9+4ODEZNNiTrHTTwuUX9IOxSKBEDaru0WvQRSeCzjSlOQEJSqwjNDO4iUoS5BMLHHmO68GYLza78tYQGmkQ9StDeJXSJr1QIndWKex3dR264g6hbXCt+StuA0IBf3KNOIEeFZmANdwrkA1KyGBlvzSgrJrJuBfIdn9sWRd9bI/xSJH5mLskLwkQWNziBnCUkmzouwpSuKxvImW8IY/Au1oYfj4/5eNvhbrydLOHsEOhCGTGsaQCdHKjkVJ9aT/YHmgF1uo/66mlhjUE3QM5+M5LxGIXzqc5WwScH6vGGhtFEUNvOKyNsFMl70SlaIUv+XyREIk/7KtbwnpBjWaZE39AhWT2o8unQji9dQnKqExFpw5pw4apvRN2TTVtoZju4UNHq8z610MzmeS5hjan1BhpoURmQEBTfwRF7JZZfeC1xw1zr5KNCL9O3KQVGFxQ0sGBMmYGXdf36pkyf1Towu+rjF9oSrFv6UvEXe6c7tUFxfnUpbgq1gy5Hl2gbvHVJLD0J1XVinDlIHIVyRmi/XvdukJEF3iDFWmpzPDmdnPAcwce0VkVgpwqZ+nEo7pqyqdBpfD/L7tUs//QxqWtL+JyOQqes4849dVyo6jCDogPIcrJ/Wh8Tx3e7hYp4R13OHH7skVjhuYSNIqsWvL3ZPMuiK1IR/wG3PFgd8cMtd2d41/MUe97O8lfGudYY0h+xYyd9n55/AQmL4ZO49oZzSD3xO6GeoAGQ4MvKipVKbAedcqterRhba7Jx1FuHVUfJ4WROw4Vy29F8ZTnVniwYK5gzyIFOP4QKw7/lX6kYnzyZUX4YQpDnOeefYJclyw==
+api: eJyVk8Fu2zAMhl9F4GkDhKRZu4tvaddtvRXrcgpyUGSmVmtLCkVnzQy/+0DbaZIm3bCTLYqkfv761ECOyZKL7IKHDG4KtM/KrZRRKaJ1K2dVnZAUvrjESS233dKbCkeggc1jgmwOs4SUYKGBMMXgEybIGvh0cSGf4xNm+24jaDVcnUu6NrkiXNeYeEianOnkTc1FIPcb8yHr8jTra6Cly3P0Q8rVO5LygEn5wL22Pnlypt/PAnfSVDTbMphcuaQ4BFUaeuxsscEzepZiE2PprJHi8VOSDg0kW2Bl5I+3ESGDsHxCyyD2rWtHmIunSBRIPI0UIhK73tQ+vK9NTM4/QttqYMelhG6JvqFHchbaVjY+n/P4zrNcZKkS0kbuRBqPukYJbU2Ot5DNG7g2ydlpzQVk80UregyZClluXPaFBchghwVocNI+Gi6OJmKqUZ/OvtOvT27XrWtU0lKFleICO/JGIBIq5CLkkEGBJgfdH5bBeDMZS9K42alpYT/Ngxzdm3gw06uQgjnCIFDWS8np7HB+FbrEnb/elmaDanp/px468+CteqEEPdM2BudZrQIpU5bqsHKAKCnjc2VDVdV+AEUQ2iClvtXmYnQ5mohBMSSuTIfQYHr/XDt+bwVb9Bbfamn2OP738+6dYXzhcSyN86KiplKa9pbPYTMB3V0+aMheIVhoKEJiSWiapUk4o7JtJbyukQSshYaNIWeWYum8gdwl+c8hW5ky4V+G+PBjYOqjeheSd7QPQeO3YrEpa1mBhmfcHiLcLlrdoYXUaeu3p9Zi5IPCk7d9hOb32+kX0GCOKeup0sNXmp/V1JnWIzrbodyeEar/XX9vUvoVKD+oj0NIBm3bP6CvDXo=
 sidebar_class_name: "head api-method"
 info_path: docs/api/enclave-api-server
 custom_edit_url: null
@@ -29,7 +29,7 @@ import Translate from "@docusaurus/Translate";
 
 <MethodEndpoint
   method={"head"}
-  path={"/users/user"}
+  path={"/v1/user/{username}"}
   context={"endpoint"}
 >
   
@@ -37,7 +37,7 @@ import Translate from "@docusaurus/Translate";
 
 
 
-Check if a specific user exists.
+Check if a specific user exists by username.
 
 <Heading
   id={"request"}
@@ -48,7 +48,7 @@ Check if a specific user exists.
 </Heading>
 
 <ParamsDetails
-  parameters={undefined}
+  {...require("./check-user-existence.ParamsDetails.json")}
 >
   
 </ParamsDetails>

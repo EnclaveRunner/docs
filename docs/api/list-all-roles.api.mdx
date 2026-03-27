@@ -5,7 +5,7 @@ description: "Retrieve a list of all roles in the system."
 sidebar_label: "List All Roles"
 hide_title: true
 hide_table_of_contents: true
-api: eJydVE2P1DAM/SuWz2V2l4/L3AaEEBIHtAun0RwyqXcaSJOs7XYZjfrfkdMuzMIiBL2kdZ1n+72XnLAl8RyKhpxwjdekHGgkcBCDKORbcDEC50gCIYF2BHIUpX6FDao7CK63eP168wZ3DTJJyUlIcH3C55eXtjzGvxm8J5HbIcJDMtwH7c7q1VqG7nNSSmogrpQYvDOQiy9iSCcU31Hv7E2PhXCNjtkdscGg1MtZXJRDOuBkT4MvL69+b+tTR1A4j6GlFtygHSVd6oFnau3TRYF7YoKQRhdDu8KK9uJptDMQamEQYmgzCaSs0LmRoBD3QcQqaAZXaan0Mt0NJLaLSfLAnuZKV3+otORDcceYXQtBQHOG6PhA/0Nj3n8hr2hq3g2BqTWFiTmzSVw4F2INs8Zz+AmqG9Sg0UJvmd9RIg4eZwFePeWLTYKQlDi5CEI8EkPFhuz9wEztCj7k/BWczhacU2I+CNxmhj4zQUvqQpRVLS/kBw56xPX2hK+dBL8ZtMP1djftGuxJu9ziGg9kkxZnv/CC985fmA+fVRPiT5gbY2me+Qzsx9ydarHsmoVr3FtO7SOk21wTH+hIPpr8m4/v4aZOgc0TolJSPpYcktb57Aye71w0F3CpBZ/7fkiLrqb4SCwz1Hi5erG6MvuULNq7qnhytccPdt42McL1MuujLk4/ffOvl8JMidI3vSjRhWTlB46GORO9RSMaGzyjetdgl0Xt5+m0d0KfOU6The8GYpNx1+DoOLi98bjdTQ125FriqvBXOpqLvKdigo4uDvVK+NXwj8R/9/YTNugeSzlL1yyrYT9cL+l4hlybnH3wWcy3PU0TNksjwxLCqfn7/o9O5D5ze7a/LCGcdtM0fQdLLPRh
+api: eJytVU2P2zgM/SsEz0Ym2XYvuaWLblGgxRYz7WmQgyIzsVpZckk5UyPwf19QdibOJDPbFnsyLInk43v8OGBJYtk1ycWAS7ylxI72BAa8kwRxC8Z74OhJwAVIFYF0kqieYYHJ7ASX93j7ZvUXrgtsDJuaErGeHjCYmnCJ3tUuYYFOA3xviTsskOl765hKXG6NFypQbEW1weUBU9eomQuJdsRYYO2Cq9sal4u+eIL3o/mhVxDaekOscJvonXUkkCIwpZbDDPviEUzcboX+HzTzCzT/ZOfgQoqZqYyly0yegVA6fx2CJHZhhxdR/3Y+EZ8S33RZrxn2a3UrTQxCoo7+mM/1c25+11pLItvWw/ExPLhUTUogy6+C2xgShaROTNN4Z406ufkq6ulwCdkwG03OJaplch43X8mms6zvB3IKbEXrR6uJY0Oc3IB9oO4pGU+5+FxRRgv6XDkf3V1COrf7IsRqImBE3C5QCVlDJyOXlzkc5ej7ApNLXs9uo6dbktiyJb3Ru9fzxSXpirPhuHcllWDaVFFII5tgmUr9NV7ggZjAhb3xrszpvJ6/uu5t4oRK0KyhjCQQYoLK7Aka4tqJaIQUwWTRc5WqBiRqxSP0IdLimUjje2hM56MpwWmvRfCGd/Q7RXK1GIg58mUVDMdXRDhp8Jb5HQViZ3EQ4M9rVb8K2qYqugch3hND9g3R2paZyhl8iPEbmDTMvOGJjzuBbWSoIxOUlIzzMsvhhWzLLnV58r0x4uyqTRUu79fahjWlKpa4xF0ePo3RK7zZL254Y+zNOBCOPu6UoiHhiafHpKuUGhwHhP5v9E0G4cI25odHLoL1qv3q03u4yylc7RgKibsmupBycjrxp5aj4AImlGBjXbdhFFXl3hPL4Go/n72aLbR2miipNuHUt/hBR8nKe9AWkacoDqei+dUVNFCS6Ee6abxxIfc8e/U5sHyP+4UW18ZY/SjT6wKrKEnvDoeNEfrCvu/1eJjGKmHpxGz8ZB4/C/jndtAzUL9RN1mRe+NbfZOXxc8jeHHvvBj4cR3+ZuRnd8+LUcdyP8Vc6w87DZo7psCKTEmclRhsVtZSM0V6MVvO+uzd289YoDlvnKFRivGrvo9LIXQTz7kmhq477oW+xyP4djzKTP2X/Scj8hC5nNg34xH2677v/wWCT0Zs
 sidebar_class_name: "get api-method"
 info_path: docs/api/enclave-api-server
 custom_edit_url: null
@@ -29,7 +29,7 @@ import Translate from "@docusaurus/Translate";
 
 <MethodEndpoint
   method={"get"}
-  path={"/rbac/list-roles"}
+  path={"/v1/rbac/role"}
   context={"endpoint"}
 >
   
@@ -39,8 +39,16 @@ import Translate from "@docusaurus/Translate";
 
 Retrieve a list of all roles in the system.
 
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
 <ParamsDetails
-  parameters={undefined}
+  {...require("./list-all-roles.ParamsDetails.json")}
 >
   
 </ParamsDetails>

@@ -1,11 +1,11 @@
 ---
 id: upload-artifact
 title: "Upload Artifact"
-description: "Upload a new artifact with its metadata and file content."
+description: "Upload raw artifact content for a package; returns the created version hash."
 sidebar_label: "Upload Artifact"
 hide_title: true
 hide_table_of_contents: true
-api: eJzNVk1v40YM/SsDnhUn6baH6pZdFG2BfgRIcjJ8oCXams1oRkuOnDUM/feCI8mW12o2wF7ii2WZfHwkHzlzgJKkYNtEGzzk8NS4gKVB4+nFIEe7wSKaFxsrY6OYmiKWGNGgL83GOjJF8JF8XEAGEbcC+RLuBjeBVQZMX1qS+DGUe8gP6adlKiGP3FIGg7v+Vbcu2gY5Xm8C11caRl9LUVGdnuK+IcghrD9TESGbYC3BY03SYEGQpWfIQOkpg4ZDQxwtiYKcDE+IEtn6LWTf1OKxInM0N2FjYkXHmiygGyK9GWcWIuJ2goDMuL8EwK2YGAyK2K3Xp3OYDGykWi6ZdN1QhhmOWmSMkMPaeuSZoJMQfatjMG2SxwK69NEWSBO89KX96eZWv85hRjEMrlQaaYuCRDatc3vlPpEANo2zBarr9WdR/9f6fx7o71GaYWPQn1VnKpQGi2fcqj52xGKD/wOlUhZMGKm8U+CmdU5GQV8oaET4LqP73vDY+1dYXcj3netWhWujCmvM8h+F7M6r+qYIg4OpUKpZsqfOvKbiEiNdRZsm/zJIwtAoaiER62Y2VN/4UxjrI22J5yvT1mviBKOYZ2CajFkTeaOIVI6TLm8bdRQJhdWk+8375mmftGWcO+gH9eebm8vZ1DSG/WxeUEyNTutJpQlsrN+hs+UPTehU4sQc+FLX/evZzTWm8hvz7+SJbXFMZmbRaDINh53VHYNtrMjHgam2v9Sf6MS8ENMpuYT2YR5tAkKlaYXYlIHE+KAN3pFpiGsrSb26ndNaS80aikqlYZLQckFDpF9fWZDomLDcG/pqJcq7rPvt/1RqFFGD+3R9sHpcBeOQt/QeE/llbhruvNF5Z4/OCPGO2CRsE4qiZaZyYf4K4dlgTD0eTFzYitkENnVgMiVFtE76DSlUtGzjHvLlAT6i2OKujRXky1W3yqCmWIUScmiCpEMH9T+4Hgf9uj8w4YTzoGXqk56gHROvYmzUOlnpua42iYj1m5AMx3r4wql+7+7/NA8pjdkNRz7yvgnWx5QgOmemnkPTJd0Fi1DXrR8auzidrpDD7mbxYXGb1muQWKMfj7PTdfO4rL6hcTgp58dupn2FIn2N141D65VNy64/zlNPAE8chsqvMqi0N/kSDoc1Cj2x6zp9/aUl1rauMtghW1xrWZerLoOKsCROHX+mPeTwqWdx9agU1Ny1SmXusttlo9NdUVATJ+YXU3OmoPt/Hx4hg/Vwx65DqT4KnHCz02NPEs+F0wslG76V+nhE+f2EQ6pBr7on0TGpqesgGyi3w6uUxff871HkJXA58W+GV9Ctuq77D/2QYDc=
+api: eJzNVk2P2zYQ/SvEnBpAsXeb9FDltAmCtkCBLrK7J8OHMTm2mKVIZUjZMQz992Io2mvv2ukhKZCTJFIzfO/NF3dgKGq2XbLBQw0PnQtoFONGISe7RJ2UDj6RT2oZWKHqUD/iit4pptSzjyo1pDQTJjJqTRxt8KrB2EyggoSrCPUMboqvCPMKOmRsKRHL1g48tgR1fsQONUEFVqB0mBqogOlLb5kM1Il7qiDqhlqEegdp24lhTGz9CobqGZX9mergeQJDdXLe/3LUBIb56Itieh/MVhw8d100lS3sOmc1iqtp0InS65iYsJW9SwgqWAZuMUENC+uRtzAMwyCnxi74SFFMfr26lscFqH2ONBkVe60pxmXv3FZidgHa5yj2ZyCFxWfS6US+GZRE+BNjk0POoSNOdgR2vHmG2ingD2dTS8gmmxwdcnZP7FORoCjy9urqpQj3DakSILXBqFp0oicZFVhZv0ZnzQ+TgpgDvxRhXH6ZW0fEPjL/QZ7Y6gOZMxEVMh2HtZVgYp8a8qkglbo08okuqg0xPZHL3t6c93bkhIzqI7EygaLyIakG16Q64tbGHI4UFOb8yX2giEpGMcXQ81hz8Pbq929kIjomNFtFX21MUWHKrg6UEq4kLPuW8tPF5PqCivsE63Cbe6qNKoWgHPKKfkYiv52rlBuvrE/EHp2KxGtilX2roHXPTGai/g7hcR+08osLq5jHRRuYlKGE1sWxaCPpnm3a5tb/HqPVN31qoJ7NpWu2lJpgpCOHKFRzY65hur6e7sfRlHEz3R16+jC+D/Dk+k6UG3U4OuCgRZNSB6W5y/dC/snYrF+G/ONeIq+dpPvN7V/qLjN70Z0k0OQTb7tg9yPSOXVsWfIgKvRG6dC2vS+xliwobQ1qWF9N3kyupVyEfIs5C8qwKmN5XzLPYeyekumHT/BRtERf07RzaL0A7NnJoWN0ZrC+hgrwCRvjBiqojyd6/pA8bSSw9Qx2uwVGemA3DLL8pSeWnJhXsEa2uJAAzHZgbJR3A/USXaRv8P7lUymLV+rc5L/ApCyi30os0PXyBRU80vbkTiIXh+/H8h0wYJgPFTSEhjgrM259GM98fS8Onkwv3imEx2h5ozV16YJNbkInBXn7z909VLAo95k2GLFZWifaAJ6W2FhSVXkK2rMEcw6M9fkQpce0NAwH1n1Zypj/y/4WY9wENkf2XVkS5YbhX336y3M=
 sidebar_class_name: "post api-method"
 info_path: docs/api/enclave-api-server
 custom_edit_url: null
@@ -29,7 +29,7 @@ import Translate from "@docusaurus/Translate";
 
 <MethodEndpoint
   method={"post"}
-  path={"/artifact/upload"}
+  path={"/v1/artifact/raw/{namespace}/{name}"}
   context={"endpoint"}
 >
   
@@ -37,7 +37,7 @@ import Translate from "@docusaurus/Translate";
 
 
 
-Upload a new artifact with its metadata and file content.
+Upload raw artifact content for a package; returns the created version hash.
 
 <Heading
   id={"request"}
@@ -48,7 +48,7 @@ Upload a new artifact with its metadata and file content.
 </Heading>
 
 <ParamsDetails
-  parameters={undefined}
+  {...require("./upload-artifact.ParamsDetails.json")}
 >
   
 </ParamsDetails>

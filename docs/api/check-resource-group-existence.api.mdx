@@ -5,7 +5,7 @@ description: "Check if a specific resource group exists in the system."
 sidebar_label: "Check Resource Group Existence"
 hide_title: true
 hide_table_of_contents: true
-api: eJytVE1T2zAQ/SuaPYsECr34FmhKuTF8nDI5KPImFtiSWMkB1+P/3lnZ+SKZcmhzSbJ6Wr339kkt5Bg0GR+Ns5DBTYH6VZilUCJ41GZptCAMriaNYkWu9gI/TIhBGCtigSI0IWI1AglRrQJkM3i4ntzAXALhW40hXru8gaxNfw1hDlmkGiVoZyPayEvK+9JoxRTGL4F5tBB0gZXiX7HxCBm4xQvqCHKv0Qw21G6ZGR/qyXmkaDD0Z+4v73qFSMauQH4S/1SgsKpC4ZZJ26HwEXTpwwyCdzb0Z3w7P+evw04PpywbQSfh6hT8WuVisGsAXRyDnq2qY+HI/MZ8QF0eo346Wpg8RztArr4klzsMwrrYs+y3XZzo/JQcSSSFV03pVC5MENE5USpaIWfgvwwViRwdD7MvHw2RBxJNLLk0JbpFi2Q09JP6fsrtOxuRrCpFQFojidR4lBoF1DWZ2EA2a+FaBaMndSwgm827uYQKY+FyyKBAlYMEr3gNxrRQerwJy1lyFXa9Hll0L2Gv41ZGEWNCJxRksGBMIsOuPewu0fRDVZ5lHuV6a4UEY5cuNd84YnWp1igm93fiMck9mXq0kRrvjI1i6UioshT7O4exB6FsLrSrqtoOo+Whr5FC32p9ProcXTAP70KsVBo636jty7LNXqIuphw5tBo/s2p3UfqnN6n3OOJHHPtSGcvcair5gH56M+DppQQezG8uoXAhMqBtFyrgM5Vdx+W3GokDMpewVmTUgo2ezTuZYoGUsvOKDTPvNZw9MQ2GlzXTOboandzsmGiNPv4Vux/EX9PJD5CwGN7YyuW8h9Q7C1LvkAFIcMnT/kHkWgulsqtarRjb9+S4qcNc9jmUwzdrGhaUbfb4JXP6UD8HvlYVdh3IQU49lJLCr/bfqxDeHeV7+/1Qgm7edd0fX/tPQg==
+api: eJylVMFy0zAQ/RXNnmBGJA2Ui28plNJbp9BTJgdF3tSitqSu1qHBo39n1nbahAR64GR7vW/13tOTOigxWXKRXfBQwKcK7YNya2VUimjd2llFmEJLFtU9hTYqfHKJk3JecYUqbRNjMwENbO4TFAu4vZh/gqUGwhSDT5ig6OD92Zk8Dhe7PTV4AlnD+an2C1MqwscWE49Ns+OmO29argK5X1iOXR+Ou74EWrmyRD+2nL9KrgyYlA88sBxgsxOTv1e4I6mi2dbBlMolxSGo2tA9ilM2eEbPAjYx1s4aAU9/JJnQQbIVNkbeeBsRCgirH2gZxNLH1hGWYjMSBRKfI4WIxG4weii/YBOT8/eQswZ2XEvpkugKPZKzkLP8+HjK7WvPSN7UKiFtkFQ/eNIPSmhbcryFYtHBhUnOzluuoFgss/AxZBpkpNT/96aRRXchuhI3QYOTNaLh6kAWU4v62ICdCH3CbJmvwroP42FSJyB0GuQqlFBAhaYEPaxZwHQzm9LK2OkO867HTLsDohle1H4TVoPJe5qfOVbMoqvnLt8r6entcn4d+sad/97WZoNqfnOtvvXmwilh6Jm2MTjPah1ImbpW+8gxZEkZXyobmqb1Y5AkYhukNIzanE0+TGbiXQyJG9NHbNyU4bQ/J72XrC4l4Ogt/smqewnuf90Tg1+MTzyNtXFeuLVUywLD5ixgM5NYrIzt07G/QaChOMzSUkMVEgus61Ym4R3VOUv5sUWSkC41bAw5sxL7Fx2ULsl7CcXa1An/IfPN7RjNt+q1rP1F2Fg0fiu7YupWvkDDA26PTkVeZt3HFKnnOfTMrcXIe+ijO+Mg5l8v559BgzlM55BGPT5l+ElivYFDtO+SHP8Gc35m244lyPp1/I1J6Wegcg8fx5IIzfk3zus62w==
 sidebar_class_name: "head api-method"
 info_path: docs/api/enclave-api-server
 custom_edit_url: null
@@ -29,7 +29,7 @@ import Translate from "@docusaurus/Translate";
 
 <MethodEndpoint
   method={"head"}
-  path={"/rbac/resource-group"}
+  path={"/v1/rbac/resource-group/{resourceGroup}"}
   context={"endpoint"}
 >
   
@@ -48,7 +48,7 @@ Check if a specific resource group exists in the system.
 </Heading>
 
 <ParamsDetails
-  parameters={undefined}
+  {...require("./check-resource-group-existence.ParamsDetails.json")}
 >
   
 </ParamsDetails>

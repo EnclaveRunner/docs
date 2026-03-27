@@ -5,7 +5,7 @@ description: "Check if a specific role exists in the system."
 sidebar_label: "Check Role Existence"
 hide_title: true
 hide_table_of_contents: true
-api: eJytVMFS2zAQ/RXNntUECr34ltC05cYEOGVyUORNLLAlsZIDqUf/3lnZkEDSdqbTk5PV2923+57UQYlBk/HROAsFXFWoH4VZCyWCR23WRgtyNQp8MSEGYayIFYqwCxGbEUiIahOgWMB8OrmCpQTCpxZDnLpyB0WX/xrCEopILUrQzka0kY+U97XRihuPHwJ37yDoChvFv+LOIxTgVg+oI8iDQgtgQtzLk/NI0WDIrTi6zwyRjN2A/DDgXYXCqgaFW+dJOGsEKUmIJnKBPMmca6XEYcLgnQ19j89nZ/x5X3K+388IkoTLU6CpKsWwmwF0fgy6t6qNlSPzE8sBdXGM+uZoZcoS7QC5/A2l0mEQ1sWeWw8+P1GPVzJQE17taqdKYYKIzola0QZZ5v+iGxI5OhauDx8pd6jJjOg7WiSjB1W+nNrxtY1IVtUiIG2RRC7cixtQt2TiDopFB1MVjJ60sYJisUxLCQ3GypVQQIWqBAle8RmMaaX0OPtqX+GWR+2JH9R5I1/F6BmdUVDAijGZAu9qvr8dsxfV+N6xvXPf5pZg7Nrlmq/jW12rLYrJzbW4zbOd9DXaSDvvjI1i7UiouhaHmYPGQShbCu2aprWDjqzwFin0pbZno4vROfPwLsRGZYX5zry9D9leM3YVWo0fuXR7t/zDe9KvMeJLHPtaGcs8Wqq5bC/LAlgWttbwDFQuRA533UoFvKc6JQ4/tUis91LCVpFRK17lYplkVhkpW+ERd8yy5/vpjpszvG6ZxJHTk3zNmGiNPv4Re+irH7PJV5CwGl7FxpWcQ+qZx1DPUABIcHl//VvGsQ5qZTet2jC2r8k+Uu8N1xtMDl+eaThQdnfALy+nd+t94FvSYEogh3HaIZQn/Fv+jQrh2VF5kO+HEKRlSukXwF8poQ==
+api: eJydU8FS2zAQ/RXNntoZT0IKvfgWKG25MVBOmRw28gYLbEms1impx//eWdshoYR2phfLXr19evv81EJBybKL4oKHHC5Kso/GrQ2aFMm6tbOGQ0WGnl2SZJw3UpJJ2yRUTyADwfsE+QJuzucXsMyAKcXgEyXIW/h0cqLL6yNu9nQT6DI4OwY6x8IwPTWUZATN3oLuPDZSBna/qBhRp29RXwOvXFGQHyFn70gqAiXjgwzaBvDsCN+PknbSTMRtFbAwLhkJwVTI96Su2OCFvGgzxlg5i9o8fUjK0EKyJdWob7KNBDmE1QNZAbXvqXFMhVpKzIHV08ghEosbTB3K+94k7Pw9dF0G4qTS0iXzN/LEzkLX6cbnYx5feSH2WJlEvCE2PfGkJ0pkG3ayhXzRwjkmZ+eNlJAvlp3qQcaahDj1+x5rPVRjAhk4pY4o5atphBvK3s69054d8VhpTVj3eVPuCejZNUkZCsihJCwgG07KYbqZTXmFdqrIaavPDvZz3OrBg30H07zIKEUijPL0e6WY3gjn16EH7pz1tsINmfn1lbntbYNj2skLb2NwXsw6sMGqMoedY3ySQV8YG+q68WNENDwb4jRQbU4mp5OZ2hNDkhr78Ix2Dze1T+6lBpa8pT+1tPsg/sfNHrwRepZprNB51dFwpbSD6wvYzPQvr9DqMvz/vF+XGZQhiWLadoWJ7rjqOi0/NcSaq2UGG2SHK/V10ULhkr4XkK+xSvSXST7cjLH6aI7n5B3tYxH9Vk3GqtEvyOCRtrv4dssu65NF3IsatubWUpSDpjd3+lUyv1/Ov0AG+DpjQ6aycVXyo3p6t4aA3iW9njV13YvIZixBl/27/xpT+hm4OOiPY0kH7brf8YUHug==
 sidebar_class_name: "head api-method"
 info_path: docs/api/enclave-api-server
 custom_edit_url: null
@@ -29,7 +29,7 @@ import Translate from "@docusaurus/Translate";
 
 <MethodEndpoint
   method={"head"}
-  path={"/rbac/role"}
+  path={"/v1/rbac/role/{role}"}
   context={"endpoint"}
 >
   
@@ -48,7 +48,7 @@ Check if a specific role exists in the system.
 </Heading>
 
 <ParamsDetails
-  parameters={undefined}
+  {...require("./check-role-existence.ParamsDetails.json")}
 >
   
 </ParamsDetails>

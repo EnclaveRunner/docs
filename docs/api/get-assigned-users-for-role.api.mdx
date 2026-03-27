@@ -1,11 +1,11 @@
 ---
 id: get-assigned-users-for-role
 title: "Get assigned users for role"
-description: "Retrieve a list of users assigned to a specific role."
+description: "Retrieve a role resource."
 sidebar_label: "Get assigned users for role"
 hide_title: true
 hide_table_of_contents: true
-api: eJzNVcGO20YM/RWCpxYQvLtNevFtUwSLADkEu8lp4QM9oq1JRjMKSXlrGPr3gpLctRtnCyxQoL4IojmPj3xPnAPWrEFiZ7FkXOI9m0TeMRCkqAZlA72yKJBq3GauwQoQaMchbmIAKYkXWKHRVnH5iPfvbv/AVYUdCbVsLB49YKaWcYmejRVGr/S9Z9ljhcLf+yhc49Kk5wo1NNwSLg9o+84PqUnMWxyqf1D93DA4rnO0hmcqw8ohtStZWR3lt+trf5yffehDYNVNn+CYDE/Rmhfbfi5SYSjZOJsjU9elGMiRr76qwx9+bIJEyLuNxq1eaM5/Fb69xNX79CGxGjyRQktpU6TlGopAzDtKsX4NpbL+ysHOFHhEFikyCiilY7E4DXEKX6BdoUVLHnovcseZJQY8NnNzuZlOyi7WXAP11nC2mSkE4dpfKSk8sfBzcyPam8toJyBcj6pBXVghF4OGdgwdSxtVvYJ7dxR+0nIaKtfugdJL4LnS2xdFOMkf9fBCm9Ln/6cINz8Z29FRHe1ToRqigpUCiWT7KoP/1438funTuM0Qs7FkSqAsOxYYsaGE0ItwvYCPpXwDslHwOSWVrcKmCLRFGGo2ikkXY3nl0Eu0/bi03pHGcNtbg8vHle+Vlq0pNS5xy95pR/4XXsmawtW82o4ADz6fqdsTmL87bsw6nHedv689Z2QQ86aMicdB5JDcxbefPsDDyB8vLULOJvuuxGxjZ5QSnJ6c1VagXEMobdvnWVHXeseiE9TuevFmceNfQVfUWhq1npf3HdvzOpy2o5eaGz+jdHi2z+tvlGlSxn/aVZcoZmfVS3L0afKP6JN3yzmFVYVNUfPw4bAm5S+ShsHD003jitZRaZ3cmxtKyi+w/uV+tvGvcPme+QnBb7x/vud2lHpPGS+lHUn04qOZKmyYapaR1XTmNgTu7OTUD5/dmQXv3n/GCuncVpONqvnp2MfrJ+9PkMf5TJ78ov71tDwMeCTfzyEcqn8//4lUn4rUJ+e7OYTDahiGvwC0wOci
+api: eJzNVcGO4zYM/RWBpxYwkkl3e8ktWywGBXpYZHZPQQ6KxcTalSUPSXsaBP73grI9SZrs9DKHXuJYph4fH5+oEzjkknwjPkVYwhqFPHZorKEU0BByaqnEGRQg9sCw3MD60+oP2BZAyE2KjAzLE/z28KCPa7SntiyRed8GMwWbFy+VkQpv8csUBaMojG2a4EurMPPvrFgn4LLC2uo/OTYIS0i771gKKJHn1hM6JRdtjVBAy0isJBtKDZL4gWX+ekZgIR8PUPyL9teJnYbPoJ/gzhstkT3e7PvGSLqFjWX2h4jOSDJSec5wWqMXrPmWQd/3BYiXoGvrFHA96qJf+gI+3lM308TnFlnMi2VT27BPVKMziYyPnQ3evZuuSJToVtBh+U4953I+Ez1iRPLlazGL+8U0lDrv0BnbSoVRRqamJHT6agObFyQ8F5fRPtxHuwBBZ7SDxiVkE5OYynZoGqTaM2sGScZmqw7OHERFd2HPnOnjm024iM/90ET71Mb/ZxMWP5FtclRjjyFZZzwbSckES4f3O6XvWMjv947GKhofRU9jMIzUIZmMbVJZtkToZuavlH4YK7nhY0hIBzb7RKZOhMahWB94ltMzli15OcJyc4JPln25aqWC5WbbaxWWbI2SZ8RmmjKgZ16PvBJqrFRXGgi1WNyqNVV8byQprEn71+E5A81do1TJwRIOqCrnREuYd4s57Ww518D5SX97OJfxpHkHzS+KeWVRiTQwstP3ncZkHXzcpxw4tSOWQc/S6suf5imreHeaYhQ6NslHyfraEMzlztFzbGx0pkx13cbRV+q4DokHqO5h9mG2UHWaxFLbeJ7p8IhyHrt5XudUYxOuKJ3OJn77whvUEPxb5k2wPuargIIiDDpvoFtoW3e21MeQa5mf2wKqxKIxp9POMn6j0Pe6/NwiqZG2BXSWvN2pkpsTOM/638FybwPjG6R/WY8++tXcN8ZPuE+3V9S7q7Oh1Tco4AceJ7/2276ACq1DyqSGT6uyxEYuNt0c/SsrPn7+CgXYa1MNJirGp2LfpZPFGhw53ad9/8qxHZegL/57/xfL/JLIXexvxiWts+//AchtG3U=
 sidebar_class_name: "get api-method"
 info_path: docs/api/enclave-api-server
 custom_edit_url: null
@@ -29,7 +29,7 @@ import Translate from "@docusaurus/Translate";
 
 <MethodEndpoint
   method={"get"}
-  path={"/rbac/role"}
+  path={"/v1/rbac/role/{role}"}
   context={"endpoint"}
 >
   
@@ -37,7 +37,7 @@ import Translate from "@docusaurus/Translate";
 
 
 
-Retrieve a list of users assigned to a specific role.
+Retrieve a role resource.
 
 <Heading
   id={"request"}

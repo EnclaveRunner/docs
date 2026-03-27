@@ -1,0 +1,1 @@
+{"title":"Body","body":{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["users"],"properties":{"users":{"type":"array","description":"Usernames assigned to this role.","items":{"type":"string"}}},"title":"PutRoleRequest"}}}}}
