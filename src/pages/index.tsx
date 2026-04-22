@@ -100,6 +100,93 @@ function FeatureSection() {
 
 
 
+function PerformanceSection() {
+  return (
+    <section className={styles.performance}>
+      <div className="container">
+        <div className={styles.performanceHeader}>
+          <h2 className={styles.performanceTitle}>Built for Speed</h2>
+          <p className={styles.performanceSubtitle}>
+            WASM-native execution leaves containers in the dust — not only more
+            secure but also faster.
+          </p>
+        </div>
+
+        <div className={styles.comparisonGrid}>
+          {/* Startup Time */}
+          <div className={styles.comparisonCard}>
+            <div className={styles.comparisonLabel}>Job Startup Time</div>
+            <div className={styles.barGroup}>
+              <div className={styles.barRow}>
+                <span className={styles.barName}>Container</span>
+                <div className={styles.barTrack}>
+                  <div
+                    className={clsx(styles.barFill, styles.barSlow)}
+                    style={{ width: "100%" }}
+                  >
+                    <span className={styles.barValue}>&lt; 200ms</span>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.barRow}>
+                <span className={styles.barName}>EnclaveRunner</span>
+                <div className={styles.barTrack}>
+                  <div
+                    className={clsx(styles.barFill, styles.barFast)}
+                    style={{ width: "25%" }}
+                  >
+                    <span className={styles.barValue}>&lt; 50ms</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={styles.speedBadge}>4× faster startup</div>
+          </div>
+
+          {/* Image / Artifact Size */}
+          <div className={styles.comparisonCard}>
+            <div className={styles.comparisonLabel}>Artifact Size</div>
+            <div className={styles.sizeComparison}>
+              <div className={styles.sizeBlock}>
+                <div className={styles.sizeBoxSlow}>
+                  <span className={styles.sizeBoxLabel}>Container image</span>
+                </div>
+              </div>
+              <div className={styles.sizeBlock}>
+                <div className={styles.sizeBoxFast}>
+                  <span className={styles.sizeBoxLabel}>WASM artifact</span>
+                </div>
+              </div>
+            </div>
+            <div className={styles.speedBadge}>
+              Significantly smaller artifacts (3x smaller in our tests)
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.perfStats}>
+          <div className={styles.perfStat}>
+            <span className={styles.perfStatNumber}>4×</span>
+            <span className={styles.perfStatLabel}>Faster job startup</span>
+          </div>
+          <div className={styles.perfStatDivider} />
+          <div className={styles.perfStat}>
+            <span className={styles.perfStatNumber}>Slim</span>
+            <span className={styles.perfStatLabel}>
+              WASM artifacts vs container images
+            </span>
+          </div>
+          <div className={styles.perfStatDivider} />
+          <div className={styles.perfStat}>
+            <span className={styles.perfStatNumber}>~0.05s</span>
+            <span className={styles.perfStatLabel}>Cold-start overhead</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function GetStartedSection() {
   return (
     <section className={styles.getStarted}>
@@ -151,6 +238,7 @@ export default function Home(): ReactNode {
       <HomepageHeader />
       <main>
         <FeatureSection />
+        <PerformanceSection />
         <GetStartedSection />
       </main>
     </Layout>

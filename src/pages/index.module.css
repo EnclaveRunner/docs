@@ -312,7 +312,340 @@
   filter: drop-shadow(0 16px 40px rgba(181, 208, 85, 0.6));
 }
 
-/* ========== NEW LANDING PAGE SECTIONS ========== */
+/* ========== PERFORMANCE COMPARISON SECTION ========== */
+
+.performance {
+  padding: 5rem 0;
+  background: linear-gradient(
+    160deg,
+    rgba(125, 143, 63, 0.06) 0%,
+    rgba(181, 208, 85, 0.04) 50%,
+    rgba(125, 143, 63, 0.06) 100%
+  );
+  border-top: 1px solid rgba(125, 143, 63, 0.12);
+  border-bottom: 1px solid rgba(125, 143, 63, 0.12);
+}
+
+.performanceHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.performanceTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #5a6b28, #7d8f3f, #98b04a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.performanceSubtitle {
+  font-size: 1.15rem;
+  color: var(--ifm-font-color-secondary);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Two-column comparison cards */
+.comparisonGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .comparisonGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.comparisonCard {
+  background: var(--ifm-card-background-color, rgba(255, 255, 255, 0.7));
+  border: 1px solid rgba(125, 143, 63, 0.18);
+  border-radius: 16px;
+  padding: 1.75rem 2rem;
+  box-shadow: 0 2px 12px rgba(125, 143, 63, 0.08);
+  backdrop-filter: blur(6px);
+  position: relative;
+  overflow: hidden;
+}
+
+.comparisonCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #7d8f3f, #b5d055);
+  border-radius: 16px 16px 0 0;
+}
+
+.comparisonLabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ifm-color-primary-darker);
+  margin-bottom: 1.25rem;
+  opacity: 0.8;
+}
+
+/* Bar chart rows */
+.barGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.barRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.barName {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ifm-font-color-secondary);
+  width: 120px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.barTrack {
+  flex: 1;
+  background: var(--ifm-color-emphasis-200);
+  border-radius: 6px;
+  height: 28px;
+  overflow: visible;
+  position: relative;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: white;
+  transition: width 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  min-width: 28px;
+  position: relative;
+}
+
+.barSlow {
+  background: linear-gradient(90deg, #94a3b8, #64748b);
+}
+
+.barFast {
+  background: linear-gradient(90deg, #7d8f3f, #b5d055);
+  box-shadow: 0 2px 8px rgba(125, 143, 63, 0.4);
+}
+
+/* For very short bars, show label outside */
+.barValueOutside {
+  position: absolute;
+  left: calc(100% + 8px);
+  white-space: nowrap;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary-darker);
+}
+
+.barValue {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: white;
+}
+
+.speedBadge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(125, 143, 63, 0.12), rgba(181, 208, 85, 0.18));
+  border: 1px solid rgba(125, 143, 63, 0.3);
+  color: var(--ifm-color-primary-darker);
+  border-radius: 20px;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* Big-number stats row */
+.perfStats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: linear-gradient(135deg, rgba(125, 143, 63, 0.1), rgba(181, 208, 85, 0.08));
+  border: 1px solid rgba(125, 143, 63, 0.2);
+  border-radius: 20px;
+  padding: 2.5rem 1rem;
+  flex-wrap: wrap;
+}
+
+.perfStat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  flex: 1;
+  min-width: 140px;
+  padding: 0.5rem 1rem;
+}
+
+.perfStatNumber {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(135deg, #5a6b28, #98b04a, #b5d055);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.03em;
+}
+
+.perfStatLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ifm-font-color-secondary);
+  text-align: center;
+}
+
+.perfStatDivider {
+  width: 1px;
+  height: 60px;
+  background: rgba(125, 143, 63, 0.25);
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .perfStats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .perfStatDivider {
+    width: 60px;
+    height: 1px;
+  }
+  .performanceTitle {
+    font-size: 2rem;
+  }
+}
+
+/* Dark mode */
+[data-theme="dark"] .performance {
+  background: linear-gradient(
+    160deg,
+    rgba(181, 208, 85, 0.07) 0%,
+    rgba(125, 143, 63, 0.05) 50%,
+    rgba(181, 208, 85, 0.07) 100%
+  );
+  border-color: rgba(181, 208, 85, 0.15);
+}
+
+[data-theme="dark"] .comparisonCard {
+  background: rgba(20, 27, 10, 0.55);
+  border-color: rgba(181, 208, 85, 0.18);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .comparisonLabel {
+  color: var(--ifm-color-primary-lighter);
+}
+
+[data-theme="dark"] .performanceTitle {
+  background: linear-gradient(135deg, #b5d055, #c2d960, #d6e87a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="dark"] .speedBadge {
+  background: rgba(181, 208, 85, 0.12);
+  border-color: rgba(181, 208, 85, 0.3);
+  color: var(--ifm-color-primary-lighter);
+}
+
+[data-theme="dark"] .perfStats {
+  background: linear-gradient(135deg, rgba(181, 208, 85, 0.08), rgba(125, 143, 63, 0.06));
+  border-color: rgba(181, 208, 85, 0.2);
+}
+
+[data-theme="dark"] .perfStatNumber {
+  background: linear-gradient(135deg, #b5d055, #d6e87a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="dark"] .perfStatDivider {
+  background: rgba(181, 208, 85, 0.2);
+}
+
+[data-theme="dark"] .barValueOutside {
+  color: var(--ifm-color-primary-lighter);
+}
+
+/* Size comparison visual */
+.sizeComparison {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+  min-height: 100px;
+}
+
+.sizeBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.sizeBoxSlow {
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(160deg, #94a3b8, #64748b);
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 8px;
+}
+
+.sizeBoxFast {
+  width: 50%;
+  height: 28px;
+  background: linear-gradient(135deg, #7d8f3f, #b5d055);
+  box-shadow: 0 2px 8px rgba(125, 143, 63, 0.4);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sizeBoxLabel {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  padding: 0 4px;
+}
+
+
 
 /* Features Section */
 .features {
