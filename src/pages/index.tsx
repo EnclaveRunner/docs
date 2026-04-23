@@ -124,7 +124,7 @@ function PerformanceSection() {
                     className={clsx(styles.barFill, styles.barSlow)}
                     style={{ width: "100%" }}
                   >
-                    <span className={styles.barValue}>&lt; 200ms</span>
+                    <span className={styles.barValue}> ~ 190.4ms</span>
                   </div>
                 </div>
               </div>
@@ -135,7 +135,7 @@ function PerformanceSection() {
                     className={clsx(styles.barFill, styles.barFast)}
                     style={{ width: "25%" }}
                   >
-                    <span className={styles.barValue}>&lt; 50ms</span>
+                    <span className={styles.barValue}> ~ 43.7ms</span>
                   </div>
                 </div>
               </div>
@@ -171,9 +171,9 @@ function PerformanceSection() {
           </div>
           <div className={styles.perfStatDivider} />
           <div className={styles.perfStat}>
-            <span className={styles.perfStatNumber}>Slim</span>
+            <span className={styles.perfStatNumber}>85% Smaller Artifacts</span>
             <span className={styles.perfStatLabel}>
-              WASM artifacts vs container images
+              WASM artifacts vs. container images
             </span>
           </div>
           <div className={styles.perfStatDivider} />
