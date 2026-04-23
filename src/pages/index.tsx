@@ -178,7 +178,7 @@ function PerformanceSection() {
           </div>
           <div className={styles.perfStatDivider} />
           <div className={styles.perfStat}>
-            <span className={styles.perfStatNumber}>~0.05s</span>
+            <span className={styles.perfStatNumber}>~0.04s</span>
             <span className={styles.perfStatLabel}>Cold-start overhead</span>
           </div>
         </div>
